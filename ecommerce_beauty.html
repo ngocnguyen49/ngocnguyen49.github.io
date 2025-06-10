@@ -2,34 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>E-commerce Dashboard Project</title>
+  <title>E-commerce Sales Analysis Dashboard</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <h1>E-commerce Dashboard with Power BI</h1>
+    <h1>E-commerce Sales Analysis Dashboard</h1>
     <a href="powerbi.html">← Back to Projects</a>
   </header>
 
   <main>
     <section>
-      <h2>Goal</h2>
-      <p>The goal of this project was to analyze e-commerce performance metrics such as sales, profit, customer segmentation, and regional trends to derive actionable insights that support business growth.</p>
+      <h2>BACKGROUND INFORMATION</h2>
+      <p>This project focuses on analyzing e-commerce performance using Power BI. The dataset includes historical records of sales, profits, customer purchases, and product categories across multiple regions. The purpose of the analysis is to visualize performance trends, uncover patterns in customer behavior, and support strategic decision-making.</p>
+    </section>
 
-      <h2>Background Information</h2>
-      <p>The dataset included detailed transactional records from an e-commerce platform, covering categories like customer demographics, order quantities, product types, sales values, profits, and shipping data across multiple years.</p>
+    <section>
+      <h2>OBJECTIVE</h2>
+      <p>The aim of this project is to design a series of interactive dashboards that allow users to monitor sales KPIs, analyze regional performance, evaluate market distribution, and understand product and segment-level behavior over time. By doing so, the dashboard empowers stakeholders to make informed, data-driven business decisions.</p>
+    </section>
 
-      <h2>Setup</h2>
-      <p>Using Power BI, I imported and cleaned the dataset with Power Query Editor. I ensured data types were consistent, removed duplicates, handled missing values, and created new calculated columns for profit margin and year-based filtering.</p>
-      
-      <img src="assets/E-commerce_Data.PNG" alt="Power Query Editor Screenshot" style="max-width: 100%; margin: 20px 0;">
+    <section>
+      <h2>CHAPTER 1: DATA PREPROCESSING</h2>
+      <p>The raw dataset was imported into Power BI and cleaned using Power Query. Key steps in data preprocessing included:</p>
+      <ul>
+        <li>Converting date formats for accurate time-based analysis</li>
+        <li>Handling missing or null values</li>
+        <li>Creating calculated columns such as Profit Margin, Year, and Month</li>
+        <li>Standardizing category and region names</li>
+      </ul>
+      <img src="assets/power-query-editor.png" alt="Power Query Editor Screenshot" style="max-width: 100%; margin-top: 15px;">
+    </section>
 
-      <h2>Dashboard Design and Creation</h2>
-      <p>The dashboard was designed with a clean, user-friendly layout to highlight key performance indicators (KPIs) such as total sales, total profit, top-performing categories, and regional breakdowns. I used clustered bar charts, line charts, slicers, and cards to visualize the trends and comparisons.</p>
-      <img src="assets/E-commerce_Dashboard.PNG" alt="Power BI E-commerce Dashboard Screenshot" style="max-width: 100%; margin: 20px 0;">
+    <section>
+      <h2>CHAPTER 2: OVERVIEW DASHBOARD</h2>
+      <p>The overview dashboard serves as the main entry point for business stakeholders. It highlights:</p>
+      <ul>
+        <li>Total sales, profit, and quantity sold over time</li>
+        <li>KPI cards showing overall business performance</li>
+        <li>Sales trends visualized via time series charts</li>
+        <li>Top product categories and high-performing customers</li>
+      </ul>
+      <img src="assets/overview-dashboard.png" alt="Overview Dashboard Screenshot" style="max-width: 100%; margin-top: 15px;">
+    </section>
 
-      <h2>Conclusion</h2>
-      <p>This dashboard provided clear insights into product and region-level performance, identifying that Asia Pacific and Europe were top markets in both sales and profit. The corporate segment showed the highest profitability. These insights support data-driven decisions for future marketing and inventory strategies.</p>
+    <section>
+      <h2>CHAPTER 3: MARKET DASHBOARD</h2>
+      <p>This section of the dashboard dives deeper into market-level analysis. Users can:</p>
+      <ul>
+        <li>Compare sales and profit by geographical regions</li>
+        <li>Identify the most profitable countries</li>
+        <li>Analyze customer count and average spending by market</li>
+        <li>Filter by time period or product type to narrow insights</li>
+      </ul>
+      <img src="assets/market-dashboard.png" alt="Market Dashboard Screenshot" style="max-width: 100%; margin-top: 15px;">
+    </section>
+
+    <section>
+      <h2>CHAPTER 4: SEGMENT AND CATEGORIES DASHBOARD</h2>
+      <p>This final section focuses on customer segments and product categories. Key features include:</p>
+      <ul>
+        <li>Performance breakdown by segment: Corporate, Consumer, Home Office</li>
+        <li>Trend analysis for product types like Beauty, Body Care, etc.</li>
+        <li>Profit margin comparison across segments and categories</li>
+        <li>Visual identification of high-volume and high-profit areas</li>
+      </ul>
+      <img src="assets/segment-category-dashboard.png" alt="Segment and Categories Dashboard Screenshot" style="max-width: 100%; margin-top: 15px;">
     </section>
   </main>
 
