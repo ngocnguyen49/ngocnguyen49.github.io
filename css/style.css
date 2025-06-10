@@ -1,118 +1,176 @@
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
 
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
 
-    nav {
-      background-color: #34495e;
-      padding: 1rem;
-      text-align: center;
-    }
+nav {
+  background-color: #34495e;
+  padding: 1rem;
+  text-align: center;
+}
 
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
 
-    section {
-      padding: 2rem;
-    }
+section {
+  padding: 2rem;
+}
 
-    h2 {
-      color: #2c3e50;
-    }
+h2 {
+  color: #2c3e50;
+}
 
-    .category-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0;
-    }
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
 
-    .category {
-      flex: 1 1 50%;
-      padding: 4rem;
-      color: white;
-      position: relative;
-      cursor: pointer;
-      transition: transform 0.3s;
-      text-decoration: none;
-    }
+.category {
+  flex: 1 1 50%;
+  padding: 4rem;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
 
-    .category:hover {
-      transform: scale(1.03);
-    }
+.category:hover {
+  transform: scale(1.03);
+}
 
-    .python { background-color: #5bc0de; }
-    .sql { background-color: #34495e; }
-    .ml { background-color: #8e44ad; }
-    .tableau { background-color: #e67e22; }
-    .powerbi { background-color: #f1c40f; color: #2c3e50; }
+.python { background-color: #5bc0de; }
+.sql { background-color: #34495e; }
+.ml { background-color: #8e44ad; }
+.tableau { background-color: #e67e22; }
+.powerbi { background-color: #f1c40f; color: #2c3e50; }
 
-    .category h3 {
-      font-size: 2rem;
-      margin: 0;
-    }
+.category h3 {
+  font-size: 2rem;
+  margin: 0;
+}
 
-    .category p {
-      margin-top: 1rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
+.category p {
+  margin-top: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
 
-    .projects {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
-    .project {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 5px;
-      flex: 1 1 300px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+.project {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  flex: 1 1 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
 
-    .contact-info {
-      list-style: none;
-      padding: 0;
-    }
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
 
-    .contact-info li {
-      margin: 0.5rem 0;
-    }
+.contact-info li {
+  margin: 0.5rem 0;
+}
 
-    a.category {
-      display: block;
-    }
-    .project-card {
-      text-decoration: none;
-      color: inherit;
-    }
-    .project-card .card {
-      padding: 20px;
-      border-radius: 8px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .project-card .card:hover {
-      transform: translateY(-5px);
-    }    
+a.category {
+  display: block;
+}
+
+.project-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card .card {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.project-card .card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Project Page Styles Appended ===== */
+
+body.project-page {
+  background: linear-gradient(to right, #1e2235, #2a2f4a);
+  color: #ffffff;
+}
+
+.project-page h2 {
+  color: #ffffff;
+  border-bottom: 2px solid #555;
+}
+
+.project-page p {
+  color: #cccccc;
+}
+
+.see-code {
+  display: block;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.see-code a {
+  text-decoration: none;
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.see-code a:hover {
+  background-color: #008ba3;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 1rem;
+  }
+
+  .category {
+    flex: 1 1 100%;
+    padding: 2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .see-code a {
+    padding: 0.75rem 1.5rem;
+  }
+}
