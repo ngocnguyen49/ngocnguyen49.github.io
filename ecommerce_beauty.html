@@ -6,74 +6,101 @@
   <link rel="stylesheet" href="css/style.css" />
   <style>
     body {
-      font-size: 18px; /* Increased font size */
+      font-size: 18px;
       font-family: Arial, sans-serif;
       line-height: 1.6;
+      background-color: #0f1b33; /* Deep blue background */
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
     }
 
     header {
-      background-color: #f8f8f8;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #ddd;
+      padding: 40px 20px 10px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 36px;
+      font-size: 32px;
       font-weight: bold;
-      background: linear-gradient(to right, #c94b4b, #4b134f);
+      background: linear-gradient(to right, #fff, #aaa);
       -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .github-button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .github-button:hover {
-      background-color: #555;
+      -webkit-text-fill-color: transparent;
     }
 
     main {
-      background-color: #f0f0f0;
-      padding: 40px;
-      margin-top: 20px;
+      padding: 40px 20px;
     }
 
     section {
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.05);
       padding: 30px;
-      margin-bottom: 40px;
+      margin: 20px auto;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 900px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     h2 {
       font-size: 24px;
       margin-top: 0;
+      color: white;
+    }
+
+    p, li {
+      color: white;
+      text-align: left;
+    }
+
+    ul {
+      text-align: left;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    img {
+      max-width: 100%;
+      margin-top: 15px;
+      border-radius: 10px;
+    }
+
+    .github-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #ffffff10;
+      color: #fff;
+      text-decoration: none;
+      border: 2px solid white;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .github-button:hover {
+      background-color: #ffffff20;
     }
 
     footer {
       text-align: center;
       padding: 20px;
       font-size: 14px;
-      color: #777;
+      color: #bbb;
+    }
+
+    a {
+      color: #ddd;
+    }
+
+    a:hover {
+      color: white;
     }
   </style>
 </head>
 <body class="project-page">
   <header>
     <h1>PROJECT: E-COMMERCE-BEAUTY ANALYSIS<br>E-COMMERCE BEAUTY DASHBOARD || POWER BI</h1>
-    <a href="powerbi.html">&larr; Back to Projects</a><br>
-    <a class="github-button" href="https://github.com/ngocnguyen49/Power-BI-Ecommerce-Beauty-Dashboard" target="_blank">See the Code on GitHub</a>
+    <a href="powerbi.html">&larr; Back to Projects</a>
   </header>
 
   <main>
@@ -109,7 +136,7 @@
         <li>Top-performing categories and customers</li>
         <li>Dynamic filtering by time period and region</li>
       </ul>
-      <img src="assets/overview.PNG" alt="Overview Dashboard Screenshot" style="max-width: 100%; margin-top: 15px;">
+      <img src="assets/overview.PNG" alt="Overview Dashboard Screenshot">
     </section>
 
     <section>
@@ -121,7 +148,7 @@
         <li>Regional performance comparisons</li>
         <li>Trends that inform marketing and expansion decisions</li>
       </ul>
-      <img src="assets/market.PNG" alt="Market Dashboard Screenshot" style="max-width: 100%; margin-top: 15px;">
+      <img src="assets/market.PNG" alt="Market Dashboard Screenshot">
     </section>
 
     <section>
@@ -133,8 +160,12 @@
         <li>Profit margin and volume comparison across segments</li>
         <li>Visual exploration of which categories drive the most value</li>
       </ul>
-      <img src="assets/segment.PNG" alt="Segment and Categories Dashboard Screenshot" style="max-width: 100%; margin-top: 15px;">
+      <img src="assets/segment.PNG" alt="Segment and Categories Dashboard Screenshot">
     </section>
+
+    <!-- GitHub Button Moved Here -->
+    <a class="github-button" href="https://github.com/ngocnguyen49/Power-BI-Ecommerce-Beauty-Dashboard" target="_blank">See the Code on GitHub</a>
+
   </main>
 
   <footer>
