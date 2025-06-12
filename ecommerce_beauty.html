@@ -9,91 +9,82 @@
       font-size: 18px;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background-color: #0f1b33; /* Deep blue background */
-      color: white;
+      background-color: white;
+      color: black;
       margin: 0;
-      padding: 0;
-      text-align: center;
+      padding: 40px;
+      text-align: left;
     }
 
     header {
-      padding: 40px 20px 10px;
+      padding-bottom: 20px;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 32px;
+      font-size: 28px;
       font-weight: bold;
-      background: linear-gradient(to right, #fff, #aaa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+      color: #000;
     }
 
     main {
-      padding: 40px 20px;
-    }
-
-    section {
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 30px;
-      margin: 20px auto;
-      border-radius: 10px;
-      max-width: 900px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      padding-top: 20px;
     }
 
     h2 {
       font-size: 24px;
-      margin-top: 0;
-      color: white;
-    }
-
-    p, li {
-      color: white;
-      text-align: left;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #000;
     }
 
     ul {
-      text-align: left;
-      display: inline-block;
-      margin: 0 auto;
+      padding-left: 20px;
+    }
+
+    p, li {
+      color: #000;
     }
 
     img {
       max-width: 100%;
+      height: auto;
       margin-top: 15px;
-      border-radius: 10px;
+      margin-bottom: 30px;
+      display: block;
     }
 
     .github-button {
       display: inline-block;
-      margin-top: 30px;
-      padding: 12px 24px;
-      background-color: #ffffff10;
-      color: #fff;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: #eee;
+      color: #000;
       text-decoration: none;
-      border: 2px solid white;
-      border-radius: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
       font-weight: bold;
     }
 
     .github-button:hover {
-      background-color: #ffffff20;
+      background-color: #ddd;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
+      text-align: left;
+      margin-top: 60px;
       font-size: 14px;
-      color: #bbb;
+      color: #555;
     }
 
     a {
-      color: #ddd;
+      color: #0077cc;
+      text-decoration: none;
     }
 
     a:hover {
-      color: white;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -104,68 +95,54 @@
   </header>
 
   <main>
-    <section>
-      <h2>BACKGROUND INFORMATION</h2>
-      <p>In the fast-paced e-commerce beauty world, understanding your market and customers is vital. The E-commerce Beauty Analysis Dashboard, powered by Power BI, is your key to unlocking insights into top-selling products, customer engagement, and emerging trends.</p>
-      <p>This dashboard acts as a strategic compass, helping businesses identify best-sellers, optimize marketing, and predict future trends. It transforms vast sales data into actionable insights.</p>
-      <p>Serving as a guide for leaders and managers, this project helps you understand what truly drives success in beauty e-commerce. It's about grasping customer desires and behaviors to make smart decisions, building a dynamic market presence where both your brand and customers thrive.</p>
-    </section>
+    <h2>BACKGROUND INFORMATION</h2>
+    <p>In the fast-paced e-commerce beauty world, understanding your market and customers is vital. The E-commerce Beauty Analysis Dashboard, powered by Power BI, is your key to unlocking insights into top-selling products, customer engagement, and emerging trends.</p>
+    <p>This dashboard acts as a strategic compass, helping businesses identify best-sellers, optimize marketing, and predict future trends. It transforms vast sales data into actionable insights.</p>
+    <p>Serving as a guide for leaders and managers, this project helps you understand what truly drives success in beauty e-commerce. It's about grasping customer desires and behaviors to make smart decisions, building a dynamic market presence where both your brand and customers thrive.</p>
 
-    <section>
-      <h2>OBJECTIVE</h2>
-      <p>The objective is to visualize key metrics and performance indicators that help uncover trends in sales and profit, understand customer preferences, and evaluate the effectiveness of market and product strategies across segments. The dashboard enables decision-makers to extract actionable insights quickly and clearly.</p>
-    </section>
+    <h2>OBJECTIVE</h2>
+    <p>The objective is to visualize key metrics and performance indicators that help uncover trends in sales and profit, understand customer preferences, and evaluate the effectiveness of market and product strategies across segments. The dashboard enables decision-makers to extract actionable insights quickly and clearly.</p>
 
-    <section>
-      <h2>CHAPTER 1: DATA PREPROCESSING</h2>
-      <p>Before creating the dashboards, the raw dataset was cleaned and prepared in Power BI using Power Query. Major preprocessing steps included:</p>
-      <ul>
-        <li>Removing duplicates and handling missing values</li>
-        <li>Converting date fields for proper time-based analysis</li>
-        <li>Creating new columns like Year, Month, Profit Margin</li>
-        <li>Standardizing region and category names</li>
-      </ul>
-    </section>
+    <h2>CHAPTER 1: DATA PREPROCESSING</h2>
+    <p>Before creating the dashboards, the raw dataset was cleaned and prepared in Power BI using Power Query. Major preprocessing steps included:</p>
+    <ul>
+      <li>Removing duplicates and handling missing values</li>
+      <li>Converting date fields for proper time-based analysis</li>
+      <li>Creating new columns like Year, Month, Profit Margin</li>
+      <li>Standardizing region and category names</li>
+    </ul>
 
-    <section>
-      <h2>CHAPTER 2: OVERVIEW DASHBOARD</h2>
-      <p>The overview dashboard summarizes the business performance with key indicators such as:</p>
-      <ul>
-        <li>Total Sales, Profit, and Quantity Sold</li>
-        <li>Sales and profit trends over time</li>
-        <li>Top-performing categories and customers</li>
-        <li>Dynamic filtering by time period and region</li>
-      </ul>
-      <img src="assets/overview.PNG" alt="Overview Dashboard Screenshot">
-    </section>
+    <h2>CHAPTER 2: OVERVIEW DASHBOARD</h2>
+    <p>The overview dashboard summarizes the business performance with key indicators such as:</p>
+    <ul>
+      <li>Total Sales, Profit, and Quantity Sold</li>
+      <li>Sales and profit trends over time</li>
+      <li>Top-performing categories and customers</li>
+      <li>Dynamic filtering by time period and region</li>
+    </ul>
+    <img src="assets/overview.PNG" alt="Overview Dashboard Screenshot">
 
-    <section>
-      <h2>CHAPTER 3: MARKET DASHBOARD</h2>
-      <p>This dashboard focuses on market-level analysis. It highlights:</p>
-      <ul>
-        <li>Sales and profit by region and country</li>
-        <li>Customer count and average order value by market</li>
-        <li>Regional performance comparisons</li>
-        <li>Trends that inform marketing and expansion decisions</li>
-      </ul>
-      <img src="assets/market.PNG" alt="Market Dashboard Screenshot">
-    </section>
+    <h2>CHAPTER 3: MARKET DASHBOARD</h2>
+    <p>This dashboard focuses on market-level analysis. It highlights:</p>
+    <ul>
+      <li>Sales and profit by region and country</li>
+      <li>Customer count and average order value by market</li>
+      <li>Regional performance comparisons</li>
+      <li>Trends that inform marketing and expansion decisions</li>
+    </ul>
+    <img src="assets/market.PNG" alt="Market Dashboard Screenshot">
 
-    <section>
-      <h2>CHAPTER 4: SEGMENT AND CATEGORIES DASHBOARD</h2>
-      <p>This section explores how different segments and product categories perform. It features:</p>
-      <ul>
-        <li>Segment-wise breakdown (Corporate, Consumer, Home Office)</li>
-        <li>Performance of product types such as Beauty, Body Care, etc.</li>
-        <li>Profit margin and volume comparison across segments</li>
-        <li>Visual exploration of which categories drive the most value</li>
-      </ul>
-      <img src="assets/segment.PNG" alt="Segment and Categories Dashboard Screenshot">
-    </section>
+    <h2>CHAPTER 4: SEGMENT AND CATEGORIES DASHBOARD</h2>
+    <p>This section explores how different segments and product categories perform. It features:</p>
+    <ul>
+      <li>Segment-wise breakdown (Corporate, Consumer, Home Office)</li>
+      <li>Performance of product types such as Beauty, Body Care, etc.</li>
+      <li>Profit margin and volume comparison across segments</li>
+      <li>Visual exploration of which categories drive the most value</li>
+    </ul>
+    <img src="assets/segment.PNG" alt="Segment and Categories Dashboard Screenshot">
 
-    <!-- GitHub Button Moved Here -->
     <a class="github-button" href="https://github.com/ngocnguyen49/Power-BI-Ecommerce-Beauty-Dashboard" target="_blank">See the Code on GitHub</a>
-
   </main>
 
   <footer>
