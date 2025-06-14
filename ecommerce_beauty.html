@@ -5,109 +5,113 @@
   <title>E-commerce Beauty Dashboard</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-    font-size: 18px;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    text-align: left;
-    background: url('assets/themes1.jpg') no-repeat center center fixed;
-    background-size: cover;
-    position: relative;
-    color: white;
-  }
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: url('assets/themes1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      position: relative;
+    }
 
-  /* Overlay effect */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(15, 27, 51, 0.85); /* Dark blue with transparency */
-    z-index: 0;
-  }
+    /* Overlay effect */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(15, 27, 51, 0.85); /* Dark blue with transparency */
+      z-index: 0;
+    }
 
-  /* Ensure all content stays above overlay */
-  body * {
-    position: relative;
-    z-index: 1;
-  }
+    /* Ensure all content stays above overlay */
+    body * {
+      position: relative;
+      z-index: 1;
+    }
 
-  header {
-    padding: 40px;
-  }
+    header {
+      padding: 40px;
+    }
 
-  header h1 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: white;
-  }
+    header h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: white;
+    }
 
-  main {
-    padding: 40px;
-  }
+    main {
+      padding: 40px;
+    }
 
-  h2 {
-    font-size: 24px;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: white;
-  }
+    h2 {
+      font-size: 24px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: white;
+    }
 
-  ul {
-    padding-left: 20px;
-  }
+    ul {
+      padding-left: 20px;
+    }
 
-  p, li {
-    color: white;
-  }
+    p, li {
+      color: white;
+    }
 
-  img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    display: block;
-    border: 2px solid white;
-  }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      display: block;
+      border: 2px solid white;
+    }
 
-  .github-button {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 10px 20px;
-    background-color: #eee;
-    color: #000;
-    text-decoration: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-weight: bold;
-  }
+    .github-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: #eee;
+      color: #000;
+      text-decoration: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-weight: bold;
+    }
 
-  .github-button:hover {
-    background-color: #ddd;
-  }
+    .github-button:hover {
+      background-color: #ddd;
+    }
 
-  footer {
-    text-align: left;
-    margin-top: 60px;
-    font-size: 14px;
-    color: #ccc;
-    padding: 40px;
-  }
+    footer {
+      text-align: left;
+      margin-top: 60px;
+      font-size: 14px;
+      color: #ccc;
+      padding: 40px;
+    }
 
-  a {
-    color: #66aaff;
-    text-decoration: none;
-  }
+    a {
+      color: #66aaff;
+      text-decoration: none;
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body class="project-page">
   <header>
