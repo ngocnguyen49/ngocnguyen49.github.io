@@ -6,87 +6,108 @@
   <link rel="stylesheet" href="css/style.css" />
   <style>
     body {
-      font-size: 18px;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: white;
-      color: black;
-      margin: 0;
-      padding: 40px;
-      text-align: left;
-    }
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+    background: url('assets/the sea of the sky - Yongzhi SHU.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: white;
+  }
 
-    header {
-      padding-bottom: 20px;
-    }
+  /* Overlay effect */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(15, 27, 51, 0.85); /* Dark blue with transparency */
+    z-index: 0;
+  }
 
-    header h1 {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #000;
-    }
+  /* Ensure all content stays above overlay */
+  body * {
+    position: relative;
+    z-index: 1;
+  }
 
-    main {
-      padding-top: 20px;
-    }
+  header {
+    padding: 40px;
+  }
 
-    h2 {
-      font-size: 24px;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      font-weight: bold;
-      color: #000;
-    }
+  header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+  }
 
-    ul {
-      padding-left: 20px;
-    }
+  main {
+    padding: 40px;
+  }
 
-    p, li {
-      color: #000;
-    }
+  h2 {
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+  }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 15px;
-      margin-bottom: 30px;
-      display: block;
-    }
+  ul {
+    padding-left: 20px;
+  }
 
-    .github-button {
-      display: inline-block;
-      margin-top: 40px;
-      padding: 10px 20px;
-      background-color: #eee;
-      color: #000;
-      text-decoration: none;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-weight: bold;
-    }
+  p, li {
+    color: white;
+  }
 
-    .github-button:hover {
-      background-color: #ddd;
-    }
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    display: block;
+    border: 2px solid white;
+  }
 
-    footer {
-      text-align: left;
-      margin-top: 60px;
-      font-size: 14px;
-      color: #555;
-    }
+  .github-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 20px;
+    background-color: #eee;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: bold;
+  }
 
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
+  .github-button:hover {
+    background-color: #ddd;
+  }
 
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  footer {
+    text-align: left;
+    margin-top: 60px;
+    font-size: 14px;
+    color: #ccc;
+    padding: 40px;
+  }
+
+  a {
+    color: #66aaff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
 </head>
 <body class="project-page">
   <header>
