@@ -6,51 +6,61 @@
   <link rel="stylesheet" href="css/style.css" />
   <style>
     html, body {
-      height: 100%;
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
-    body {
-      font-size: 18px;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+    /* Top section with background and overlay */
+    .hero-section {
       background: url('assets/themes1.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: white;
       position: relative;
+      color: white;
+      padding: 40px;
     }
 
-    /* Overlay effect */
-    body::before {
+    .hero-section::before {
       content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
+      position: absolute;
+      top: 0; left: 0;
       width: 100%;
-      background-color: rgba(15, 27, 51, 0.85); /* Dark blue with transparency */
+      height: 100%;
+      background-color: rgba(15, 27, 51, 0.85); /* overlay */
       z-index: 0;
     }
 
-    /* Ensure all content stays above overlay */
-    body * {
+    .hero-section * {
       position: relative;
       z-index: 1;
     }
 
-    header {
-      padding: 40px;
+    .hero-section header {
+      text-align: left;
     }
 
-    header h1 {
+    .hero-section h1 {
       font-size: 28px;
       font-weight: bold;
       margin-bottom: 10px;
       color: white;
     }
 
+    .hero-section a {
+      color: #66aaff;
+      text-decoration: none;
+    }
+
+    .hero-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content after the overlay */
     main {
+      background-color: #0f1b33;
+      color: white;
       padding: 40px;
     }
 
@@ -96,8 +106,9 @@
     }
 
     footer {
+      background-color: #0f1b33;
       text-align: left;
-      margin-top: 60px;
+      margin-top: 0;
       font-size: 14px;
       color: #ccc;
       padding: 40px;
@@ -113,18 +124,23 @@
     }
   </style>
 </head>
-<body class="project-page">
-  <header>
-    <h1>PROJECT: E-COMMERCE-BEAUTY ANALYSIS<br>E-COMMERCE BEAUTY DASHBOARD || POWER BI</h1>
-    <a href="powerbi.html">&larr; Back to Projects</a>
-  </header>
+<body>
+
+  <div class="hero-section">
+    <header>
+      <h1>PROJECT: E-COMMERCE-BEAUTY ANALYSIS<br>E-COMMERCE BEAUTY DASHBOARD || POWER BI</h1>
+      <a href="powerbi.html">&larr; Back to Projects</a>
+    </header>
+
+    <section>
+      <h2>BACKGROUND INFORMATION</h2>
+      <p>In the fast-paced e-commerce beauty world, understanding your market and customers is vital. The E-commerce Beauty Analysis Dashboard, powered by Power BI, is your key to unlocking insights into top-selling products, customer engagement, and emerging trends.</p>
+      <p>This dashboard acts as a strategic compass, helping businesses identify best-sellers, optimize marketing, and predict future trends. It transforms vast sales data into actionable insights.</p>
+      <p>Serving as a guide for leaders and managers, this project helps you understand what truly drives success in beauty e-commerce. It's about grasping customer desires and behaviors to make smart decisions, building a dynamic market presence where both your brand and customers thrive.</p>
+    </section>
+  </div>
 
   <main>
-    <h2>BACKGROUND INFORMATION</h2>
-    <p>In the fast-paced e-commerce beauty world, understanding your market and customers is vital. The E-commerce Beauty Analysis Dashboard, powered by Power BI, is your key to unlocking insights into top-selling products, customer engagement, and emerging trends.</p>
-    <p>This dashboard acts as a strategic compass, helping businesses identify best-sellers, optimize marketing, and predict future trends. It transforms vast sales data into actionable insights.</p>
-    <p>Serving as a guide for leaders and managers, this project helps you understand what truly drives success in beauty e-commerce. It's about grasping customer desires and behaviors to make smart decisions, building a dynamic market presence where both your brand and customers thrive.</p>
-
     <h2>OBJECTIVE</h2>
     <p>The objective is to visualize key metrics and performance indicators that help uncover trends in sales and profit, understand customer preferences, and evaluate the effectiveness of market and product strategies across segments. The dashboard enables decision-makers to extract actionable insights quickly and clearly.</p>
 
