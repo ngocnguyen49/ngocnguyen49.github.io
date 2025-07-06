@@ -1,196 +1,58 @@
+/* Reset & Base */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: url('assets/themes1.jpg') no-repeat center center fixed;
-  background-size: cover;
-  position: relative;
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: left;
-  color: white;
-}
-
-/* Overlay effect */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(15, 27, 51, 0.85); /* dark blue overlay */
-  z-index: 0;
-}
-
-/* Ensure all content stays above the overlay */
-body * {
-  position: relative;
-  z-index: 1;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #f0f0f0;
 }
 
 header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 2rem;
   text-align: center;
-}
-
-nav {
-  background-color: #34495e;
-  padding: 1rem;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 1rem;
-  text-decoration: none;
-}
-
-section {
   padding: 2rem;
+  background-color: #1c1c1c;
+  border-bottom: 1px solid #333;
 }
 
-h2 {
-  color: #ffffff;
-}
-
-.category-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-}
-
-.category {
-  flex: 1 1 50%;
-  padding: 4rem;
-  color: white;
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.3s;
-  text-decoration: none;
-}
-
-.category:hover {
-  transform: scale(1.03);
-}
-
-.python { background-color: #5bc0de; }
-.sql { background-color: #34495e; }
-.ml { background-color: #8e44ad; }
-tableau { background-color: #e67e22; }
-.powerbi { background-color: #f1c40f; color: #2c3e50; }
-
-.category h3 {
-  font-size: 2rem;
+h1 {
   margin: 0;
+  font-size: 2.5rem;
 }
 
-.category p {
-  margin-top: 1rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
+/* Projects Section */
 .projects {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-}
-
-.project {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 5px;
-  flex: 1 1 300px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-footer {
-  background-color: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-.contact-info {
-  list-style: none;
-  padding: 0;
-}
-
-.contact-info li {
-  margin: 0.5rem 0;
-}
-
-a.category {
-  display: block;
+  padding: 2rem;
 }
 
 .project-card {
-  text-decoration: none;
-  color: inherit;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card .card {
-  padding: 20px;
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-
-.project-card .card:hover {
+.project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
 }
 
-/* ===== Project Page Styles Appended ===== */
-
-
-.project-page h2 {
-  color: #ffffff;
-  border-bottom: 2px solid #555;
-}
-
-.project-page p {
-  color: #cccccc;
-}
-
-.see-code {
+.project-card img {
+  width: 100%;
+  height: auto;
   display: block;
+}
+
+.project-info {
+  padding: 1rem;
   text-align: center;
-  margin: 3rem 0;
 }
 
-.see-code a {
-  text-decoration: none;
-  background-color: #00bcd4;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.see-code a:hover {
-  background-color: #008ba3;
-}
-
-@media (max-width: 768px) {
-  section {
-    padding: 1rem;
-  }
-
-  .category {
-    flex: 1 1 100%;
-    padding: 2rem;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .see-code a {
-    padding: 0.75rem 1.5rem;
-  }
+.project-info h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #00ffff;
 }
