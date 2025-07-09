@@ -6,7 +6,7 @@ html, body {
   font-size: 18px;
   line-height: 1.6;
   color: white;
-  background-color: #0f1b33;
+  background-color: #f9f9f9; /* CHANGED */
 }
 
 /* === CONTAINER === */
@@ -47,7 +47,7 @@ html, body {
 
 /* === MAIN CONTENT === */
 main {
-  background-color: #0f1b33;
+  background-color: #f9f9f9; /* CHANGED */
   padding: 40px 0;
 }
 
@@ -95,7 +95,7 @@ img {
 
 /* === FOOTER === */
 footer {
-  background-color: #0f1b33;
+  background-color: #f9f9f9; /* CHANGED */
   text-align: left;
   font-size: 14px;
   color: #ccc;
