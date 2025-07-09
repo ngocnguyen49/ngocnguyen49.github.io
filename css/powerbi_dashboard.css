@@ -9,6 +9,13 @@ html, body {
   background-color: #0f1b33;
 }
 
+/* === CONTAINER === */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /* === HERO SECTION === */
 .hero-section {
   position: relative;
@@ -33,25 +40,15 @@ html, body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Prevent background content from overlapping */
 .hero-section * {
   position: relative;
   z-index: 1;
 }
 
-.hero-section a {
-  color: #66aaff;
-  text-decoration: none;
-}
-
-.hero-section a:hover {
-  text-decoration: underline;
-}
-
 /* === MAIN CONTENT === */
 main {
   background-color: #0f1b33;
-  padding: 40px;
+  padding: 40px 0;
 }
 
 h2 {
@@ -102,7 +99,7 @@ footer {
   text-align: left;
   font-size: 14px;
   color: #ccc;
-  padding: 40px;
+  padding: 40px 0;
 }
 
 /* === LINKS === */
