@@ -93,15 +93,6 @@ img {
   background-color: #ddd;
 }
 
-/* === FOOTER === */
-footer {
-  background-color: #0f1b33;
-  text-align: left;
-  font-size: 14px;
-  color: #ccc;
-  padding: 40px 0;
-}
-
 /* === LINKS === */
 a {
   color: #66aaff;
@@ -109,5 +100,59 @@ a {
 }
 
 a:hover {
+  text-decoration: underline;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #0f1b33;
+  text-align: left;
+  font-size: 14px;
+  color: #ccc;
+  padding: 60px 0;
+}
+
+footer h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: white;
+}
+
+footer p.description {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+footer .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 18px;
+  color: white;
+}
+
+footer .contact-info div {
+  display: flex;
+  align-items: center;
+}
+
+footer .contact-info i {
+  font-size: 20px;
+  margin-right: 15px;
+  color: white;
+}
+
+footer .contact-info a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px dotted white;
+}
+
+footer .contact-info a:hover {
   text-decoration: underline;
 }
