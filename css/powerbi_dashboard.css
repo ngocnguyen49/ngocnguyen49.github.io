@@ -161,5 +161,6 @@ footer .contact-info a:hover {
 footer .contact-info a:focus,
 footer .contact-info a:active {
   text-decoration: none;
+  border-bottom: 1px dotted white;
   outline: none;
 }
