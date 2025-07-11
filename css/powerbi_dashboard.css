@@ -156,3 +156,10 @@ footer .contact-info a {
 footer .contact-info a:hover {
   text-decoration: underline;
 }
+
+/* Remove underline on click/focus */
+footer .contact-info a:focus,
+footer .contact-info a:active {
+  text-decoration: none;
+  outline: none;
+}
