@@ -150,17 +150,13 @@ footer .contact-info i {
 footer .contact-info a {
   color: white;
   text-decoration: none;
-  border-bottom: 1px dotted white;
+  border-bottom: none; /* Removes underline */
 }
 
-footer .contact-info a:hover {
-  text-decoration: underline;
-}
-
-/* Remove underline on click/focus */
+footer .contact-info a:hover,
 footer .contact-info a:focus,
 footer .contact-info a:active {
   text-decoration: none;
-  border-bottom: 1px dotted white;
+  border-bottom: none;
   outline: none;
 }
