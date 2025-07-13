@@ -289,8 +289,6 @@ a.category {
 
 /* === CONTACT SECTION === */
 #contact {
-  padding-top: 100vh;     /* Moves content down to appear as clean section */
-  margin-top: -100vh;     /* Pulls the section into viewport cleanly */
   background-color: #0f1b33;
   text-align: left;
   font-size: 14px;
