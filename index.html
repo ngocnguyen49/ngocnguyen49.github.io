@@ -35,39 +35,65 @@
     <p>Data Analyst | Python, SQL, Machine Learning Models, Tableau, Power BI</p>
   </header>
 
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        Welcome to my Data Analyst Portfolio! I have a background in Data Analysis and a passion for uncovering insights through data. My expertise includes data cleaning, analysis, and visualization using tools like Python, SQL, Machine Learning Models, Tableau, and Power BI.
-      </p>
-    </div>
-  </section>
-
   <section id="projects">
     <div class="container">
       <h2>Portfolio Projects</h2>
+
+      <!-- FILTER BUTTONS -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="python">Python</button>
+        <button class="filter-btn" data-category="sql">SQL</button>
+        <button class="filter-btn" data-category="ml">Machine Learning</button>
+        <button class="filter-btn" data-category="tableau">Tableau</button>
+        <button class="filter-btn" data-category="powerbi">Power BI</button>
+      </div>
+
+      <!-- PROJECT CARDS -->
       <div class="category-grid">
-        <a href="python.html" class="category python">
-          <h3>Python</h3>
-          <p>Transforming Data with Python's Powerful Libraries and Frameworks</p>
-        </a>
-        <a href="sql.html" class="category sql">
-          <h3>SQL</h3>
-          <p>Mastering Structured Data with SQL Queries and Optimizations</p>
-        </a>
-        <a href="ml.html" class="category ml">
-          <h3>Machine Learning</h3>
-          <p>Predictive Modeling and Insight Generation Using ML Algorithms</p>
-        </a>
-        <a href="tableau.html" class="category tableau">
-          <h3>Tableau</h3>
-          <p>Interactive Dashboards and Storytelling with Tableau</p>
-        </a>
-        <a href="powerbi.html" class="category powerbi">
-          <h3>Power BI</h3>
-          <p>Data Visualizations and Reports Driving Business Insights</p>
-        </a>
+
+        <div class="category-card python">
+          <a href="python_project.html" class="category python">
+            <h3>Python</h3>
+            <p>Transforming Data with Python's Powerful Libraries and Frameworks</p>
+          </a>
+        </div>
+
+        <div class="category-card sql">
+          <a href="sql_project.html" class="category sql">
+            <h3>SQL</h3>
+            <p>Mastering Structured Data with SQL Queries and Optimizations</p>
+          </a>
+        </div>
+
+        <div class="category-card ml">
+          <a href="ml_project.html" class="category ml">
+            <h3>Machine Learning</h3>
+            <p>Predictive Modeling and Insight Generation Using ML Algorithms</p>
+          </a>
+        </div>
+
+        <div class="category-card tableau">
+          <a href="tableau_project.html" class="category tableau">
+            <h3>Tableau</h3>
+            <p>Interactive Dashboards and Storytelling with Tableau</p>
+          </a>
+        </div>
+
+        <div class="category-card powerbi">
+          <a href="ecommerce_beauty.html" class="category powerbi">
+            <h3>Power BI</h3>
+            <p>Beauty sales over Market, Segment and Categories</p>
+          </a>
+        </div>
+
+        <div class="category-card powerbi">
+          <a href="email_performance.html" class="category powerbi">
+            <h3>Power BI</h3>
+            <p>Email performance over Metric, Geographical and Campaign</p>
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -86,6 +112,7 @@
   </section>
 
   <script>
+    // MENU TOGGLE
     const menuBtn = document.getElementById("menu-button");
     const menuPopup = document.getElementById("menu-popup");
     const closeMenu = document.getElementById("close-menu");
@@ -102,6 +129,27 @@
     menuLinks.forEach(link => {
       link.addEventListener("click", () => {
         menuPopup.classList.add("hidden");
+      });
+    });
+
+    // FILTER FUNCTIONALITY
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".category-card");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const category = button.getAttribute("data-category");
+
+        projectCards.forEach(card => {
+          if (category === "all" || card.classList.contains(category)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
       });
     });
   </script>
