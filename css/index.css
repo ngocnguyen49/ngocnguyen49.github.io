@@ -308,13 +308,6 @@ h2 {
   color: #ccc;
 }
 
-/* Make the content part dark and clean */
-.card-content {
-  padding: 20px;
-  background-color: #2a2a2a;
-  color: white;
-}
-
 .card-content h2 {
   font-size: 1.1rem;
   margin-bottom: 10px;
