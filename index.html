@@ -47,38 +47,47 @@
 
   <!-- PROJECTS SECTION -->
   <section id="projects">
-    <div class="container">
-      <h2>Portfolio Projects</h2>
+  <div class="container">
+    <h2>Portfolio Projects</h2>
 
-      <!-- Filter Buttons -->
-      <div class="filter-buttons">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="python">Python</button>
-        <button class="filter-btn" data-category="sql">SQL</button>
-        <button class="filter-btn" data-category="ml">Machine Learning</button>
-        <button class="filter-btn" data-category="tableau">Tableau</button>
-        <button class="filter-btn" data-category="powerbi">Power BI</button>
-      </div>
-
-      <!-- Project Cards -->
-      <div class="category-grid">
-        <div class="category-card powerbi">
-          <a href="ecommerce_beauty.html" class="category powerbi">
-            <h3>Power BI</h3>
-            <p>Beauty sales over Market, Segment and Categories</p>
-          </a>
-        </div>
-
-        <div class="category-card powerbi">
-          <a href="email_performance.html" class="category powerbi">
-            <h3>Power BI</h3>
-            <p>Email performance over Metric, Geographical and Campaign</p>
-          </a>
-        </div>
-
-      </div>
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+      <button class="filter-btn" data-category="all">All</button>
+      <button class="filter-btn" data-category="powerbi">Power BI</button>
+      <!-- You can add more like Python, SQL, etc. -->
     </div>
-  </section>
+
+    <!-- Project Cards Grid -->
+    <div class="grid" id="projectGrid">
+
+      <!-- Power BI Project 1 -->
+      <div class="card" data-category="powerbi">
+        <a href="ecommerce_beauty.html">
+          <img src="assets/ecommerce-thumbail.jpg" alt="E-commerce Beauty Project">
+          <div class="card-content">
+            <h2>Beauty sales over Market, Segment and Categories</h2>
+            <p>Visualization || Power BI</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Power BI Project 2 -->
+      <div class="card" data-category="powerbi">
+        <a href="email_performance.html">
+          <img src="assets/email-thumbail.jpg" alt="Email Performance Analysis Project">
+          <div class="card-content">
+            <h2>Email performance over Metric, Geographical and Campaign</h2>
+            <p>Visualization || Power BI</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Add more cards here with data-category="python", "sql", etc. -->
+
+    </div>
+  </div>
+</section>
+
 
   <!-- CONTACT SECTION -->
   <section id="contact">
@@ -115,26 +124,19 @@
       });
     });
 
-    // Filter logic
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const projectCards = document.querySelectorAll(".category-card");
+ <script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.card');
 
-    filterButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        filterButtons.forEach(btn => btn.classList.remove("active"));
-        button.classList.add("active");
-
-        const category = button.getAttribute("data-category");
-
-        projectCards.forEach(card => {
-          if (category === "all" || card.classList.contains(category)) {
-            card.style.display = "block";
-          } else {
-            card.style.display = "none";
-          }
-        });
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-category');
+      cards.forEach(card => {
+        card.style.display = (category === 'all' || card.getAttribute('data-category') === category)
+          ? 'block' : 'none';
       });
     });
-  </script>
+  });
+</script>
 </body>
 </html>
