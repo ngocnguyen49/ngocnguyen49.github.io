@@ -287,6 +287,10 @@ a.category {
   padding: 0 20px;
 }
 
+section {
+  padding: 60px 0;
+}
+
 /* === CONTACT SECTION === */
 #contact {
   background-color: #0f1b33;
