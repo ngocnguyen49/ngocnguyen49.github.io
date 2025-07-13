@@ -269,7 +269,7 @@ h2 {
 
 /* === CARD STYLE === */
 .card {
-  background: #1c1c1c; /* dark background */
+  background: #2f3244; /* New dark blue-gray */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -286,6 +286,26 @@ h2 {
   height: 180px;
   object-fit: cover;
   display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-content {
+  padding: 20px;
+  background-color: #2f3244; /* Same dark background for content */
+  color: white;
+}
+
+.card-content h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #ccc;
 }
 
 /* Make the content part dark and clean */
