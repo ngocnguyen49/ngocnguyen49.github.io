@@ -44,8 +44,7 @@
       </p>
     </div>
   </section>
-
- <section id="projects">
+  <section id="projects">
   <div class="container">
     <h2>Portfolio Projects</h2>
 
@@ -79,6 +78,7 @@
     </div>
   </div>
 </section>
+
   <!-- CONTACT SECTION -->
   <section id="contact">
     <div class="container custom-footer">
@@ -93,33 +93,36 @@
     </div>
   </section>
 
-  <script>
-    // Menu toggle
-    const menuBtn = document.getElementById("menu-button");
-    const menuPopup = document.getElementById("menu-popup");
-    const closeMenu = document.getElementById("close-menu");
-    const menuLinks = document.querySelectorAll(".menu-link");
+<script>
+  // MENU TOGGLE
+  const menuBtn = document.getElementById("menu-button");
+  const menuPopup = document.getElementById("menu-popup");
+  const closeMenu = document.getElementById("close-menu");
+  const menuLinks = document.querySelectorAll(".menu-link");
 
-    menuBtn.addEventListener("click", () => {
-      menuPopup.classList.remove("hidden");
-    });
+  menuBtn.addEventListener("click", () => {
+    menuPopup.classList.remove("hidden");
+  });
 
-    closeMenu.addEventListener("click", () => {
+  closeMenu.addEventListener("click", () => {
+    menuPopup.classList.add("hidden");
+  });
+
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
       menuPopup.classList.add("hidden");
     });
+  });
 
-    menuLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        menuPopup.classList.add("hidden");
-      });
-    });
-
- <script>
+  // FILTER BUTTON FUNCTIONALITY
   const buttons = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll('.category-card');
 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
       const category = btn.getAttribute('data-category');
       cards.forEach(card => {
         card.style.display = (category === 'all' || card.getAttribute('data-category') === category)
