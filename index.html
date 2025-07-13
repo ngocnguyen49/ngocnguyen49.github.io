@@ -35,11 +35,22 @@
     <p>Data Analyst | Python, SQL, Machine Learning Models, Tableau, Power BI</p>
   </header>
 
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Welcome to my Data Analyst Portfolio! I have a background in Data Analysis and a passion for uncovering insights through data. My expertise includes data cleaning, analysis, and visualization using tools like Python, SQL, Machine Learning Models, Tableau, and Power BI.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
   <section id="projects">
     <div class="container">
       <h2>Portfolio Projects</h2>
 
-      <!-- FILTER BUTTONS -->
+      <!-- Filter Buttons -->
       <div class="filter-buttons">
         <button class="filter-btn active" data-category="all">All</button>
         <button class="filter-btn" data-category="python">Python</button>
@@ -49,37 +60,8 @@
         <button class="filter-btn" data-category="powerbi">Power BI</button>
       </div>
 
-      <!-- PROJECT CARDS -->
+      <!-- Project Cards -->
       <div class="category-grid">
-
-        <div class="category-card python">
-          <a href="python_project.html" class="category python">
-            <h3>Python</h3>
-            <p>Transforming Data with Python's Powerful Libraries and Frameworks</p>
-          </a>
-        </div>
-
-        <div class="category-card sql">
-          <a href="sql_project.html" class="category sql">
-            <h3>SQL</h3>
-            <p>Mastering Structured Data with SQL Queries and Optimizations</p>
-          </a>
-        </div>
-
-        <div class="category-card ml">
-          <a href="ml_project.html" class="category ml">
-            <h3>Machine Learning</h3>
-            <p>Predictive Modeling and Insight Generation Using ML Algorithms</p>
-          </a>
-        </div>
-
-        <div class="category-card tableau">
-          <a href="tableau_project.html" class="category tableau">
-            <h3>Tableau</h3>
-            <p>Interactive Dashboards and Storytelling with Tableau</p>
-          </a>
-        </div>
-
         <div class="category-card powerbi">
           <a href="ecommerce_beauty.html" class="category powerbi">
             <h3>Power BI</h3>
@@ -98,6 +80,7 @@
     </div>
   </section>
 
+  <!-- CONTACT SECTION -->
   <section id="contact">
     <div class="container custom-footer">
       <h2>GET IN TOUCH</h2>
@@ -112,7 +95,7 @@
   </section>
 
   <script>
-    // MENU TOGGLE
+    // Menu toggle
     const menuBtn = document.getElementById("menu-button");
     const menuPopup = document.getElementById("menu-popup");
     const closeMenu = document.getElementById("close-menu");
@@ -132,7 +115,7 @@
       });
     });
 
-    // FILTER FUNCTIONALITY
+    // Filter logic
     const filterButtons = document.querySelectorAll(".filter-btn");
     const projectCards = document.querySelectorAll(".category-card");
 
