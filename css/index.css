@@ -249,80 +249,75 @@ h2 {
   margin-bottom: 30px;
 }
 
-.filter-buttons button {
-  background-color: #ffffff;
-  color: #0f1b33;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
+.filter-buttons .filter-btn {
+  background-color: #fff;
+  border: 2px solid #333;
+  color: #333;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.filter-buttons button:hover {
-  background-color: #ffd700;
-  color: #0f1b33;
+.filter-buttons .filter-btn:hover,
+.filter-buttons .filter-btn.active {
+  background-color: #333;
+  color: #fff;
 }
 
-.filter-buttons button.active {
-  background-color: #ffd700;
-  color: #0f1b33;
-}
-
-/* === FILTERED PROJECT CARDS === */
-.category-card {
-  display: block;
-}
-
-.category-card.hidden {
-  display: none;
-}
-
-/* === Power BI Style Cards === */
-.grid.powerbi-style {
-  display: flex;
-  flex-wrap: wrap;
+/* === PROJECT GRID === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  justify-content: center;
+  padding: 20px 0;
 }
 
-.grid.powerbi-style .card {
-  background-color: #ffffff;
-  max-width: 600px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+/* === CARD STYLE === */
+.card {
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.grid.powerbi-style .card:hover {
-  transform: scale(1.02);
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-.grid.powerbi-style .card img {
-  width: 40%;
+.card img {
+  width: 100%;
+  height: 180px;
   object-fit: cover;
 }
 
-.grid.powerbi-style .card-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.card-content {
+  padding: 15px;
+  color: #000;
 }
 
-.grid.powerbi-style .card-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #0f1b33;
+.card-content h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
 }
 
-.grid.powerbi-style .card-content p {
-  font-size: 1rem;
-  color: #444;
+.card-content p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Responsive text on small devices */
+@media (max-width: 600px) {
+  .card-content h2 {
+    font-size: 1rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
 }
