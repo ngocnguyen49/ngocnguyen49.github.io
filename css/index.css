@@ -3,10 +3,10 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #2f3244; /* updated solid background color */
+  background-color: #2f3244;
   position: relative;
   font-size: 18px;
   line-height: 1.6;
