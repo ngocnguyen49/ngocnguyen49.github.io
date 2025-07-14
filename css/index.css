@@ -6,75 +6,68 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #2f3244;
+  color: white;
   font-size: 18px;
   line-height: 1.6;
-  color: white;
-  background-color: #2f3244;
+  text-align: left;
 }
 
-/* Removed body::before overlay */
-
 body * {
+  font-family: 'Montserrat', sans-serif;
   position: relative;
   z-index: 1;
 }
 
+/* === HERO SECTION === */
 .hero-section {
   background: url('assets/themes2.jpg') no-repeat center center fixed;
   background-size: cover;
+  position: relative;
   padding: 140px 20px 100px;
   text-align: center;
   color: white;
-  position: relative;
 }
 
 .hero-section::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(15, 27, 51, 0.7); /* similar dark overlay */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(15, 27, 51, 0.7);
   z-index: 0;
 }
 
-.hero-section * {
-  position: relative;
-  z-index: 1;
-}
-
 .hero-section h1 {
-  font-family: 'Montserrat', sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  letter-spacing: 2px;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.hero-section h2,
 .hero-section p {
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
-  color: #f0f0f0;
-  letter-spacing: 1px;
   max-width: 800px;
   margin: 0 auto;
+  color: #f0f0f0;
   text-transform: uppercase;
+  letter-spacing: 1px;
   line-height: 1.8;
 }
 
-section {
-  padding: 60px 0;
-  background-color: transparent;
-}
-
+/* === CONTAINER === */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* === SECTIONS === */
+section {
+  padding: 60px 0;
+  background-color: transparent;
 }
 
 h2 {
@@ -92,7 +85,6 @@ h2 {
   flex: 1 1 50%;
   padding: 4rem;
   color: white;
-  position: relative;
   cursor: pointer;
   transition: transform 0.3s;
   text-decoration: none;
@@ -122,7 +114,6 @@ h2 {
 /* === CONTACT SECTION === */
 #contact {
   background-color: transparent;
-  text-align: left;
   font-size: 14px;
   padding-bottom: 60px;
 }
@@ -134,13 +125,11 @@ h2 {
   border-bottom: 1px solid #ccc;
   display: inline-block;
   padding-bottom: 5px;
-  color: white;
 }
 
 #contact p.description {
   font-size: 18px;
   margin-bottom: 40px;
-  color: white;
 }
 
 #contact .contact-info {
@@ -148,7 +137,6 @@ h2 {
   flex-direction: column;
   gap: 20px;
   font-size: 18px;
-  color: white;
 }
 
 #contact .contact-info div {
@@ -159,7 +147,6 @@ h2 {
 #contact .contact-info i {
   font-size: 20px;
   margin-right: 15px;
-  color: white;
 }
 
 #contact .contact-info a {
@@ -328,7 +315,6 @@ h2 {
   font-size: 1.1rem;
   margin-bottom: 10px;
   font-weight: bold;
-  color: white;
 }
 
 .card-content p {
@@ -351,5 +337,13 @@ h2 {
 
   .card-content p {
     font-size: 0.9rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
   }
 }
