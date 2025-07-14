@@ -22,7 +22,7 @@ body * {
 }
 
 .hero-section {
-  background: url('assets/themes2.jpg') no-repeat center center;
+  background: url('/assets/themes2.jpg') no-repeat center center;
   background-size: cover;
   background-color: #2f3244; /* fallback color if image fails */
 }
