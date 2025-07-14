@@ -24,10 +24,7 @@ body * {
 .hero-section {
   background: url('assets/themes2.jpg') no-repeat center center;
   background-size: cover;
-  padding: 140px 20px 100px;
-  text-align: center;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
+  background-color: #2f3244; /* fallback color if image fails */
 }
 
 .hero-section h1 {
