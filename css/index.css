@@ -6,8 +6,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: url('assets/themes1.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-color: #2f3244; /* updated background color */
   position: relative;
   font-size: 18px;
   line-height: 1.6;
