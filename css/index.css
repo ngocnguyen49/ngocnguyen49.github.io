@@ -21,7 +21,7 @@ body * {
 
 /* === HERO SECTION === */
 .hero-section {
-  background: url('assets/themes2.jpg') no-repeat center center fixed;
+  background: url('../assets/themes2.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
   padding: 140px 20px 100px;
