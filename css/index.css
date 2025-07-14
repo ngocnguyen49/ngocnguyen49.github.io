@@ -6,7 +6,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #2f3244; /* updated background color */
+  background-color: #2f3244; /* updated solid background color */
   position: relative;
   font-size: 18px;
   line-height: 1.6;
@@ -14,16 +14,7 @@ body {
   color: white;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(15, 27, 51, 0.85);
-  z-index: 0;
-}
+/* Removed body::before overlay */
 
 body * {
   position: relative;
@@ -33,22 +24,22 @@ body * {
 header {
   background-color: transparent;
   color: white;
-  padding: 80px 0 60px; /* top, right/left (from .container), bottom */
-  text-align: left; /* ensure it's aligned left */
+  padding: 80px 0 60px;
+  text-align: left;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 4rem;
+  font-weight: 800;
   margin-bottom: 20px;
   letter-spacing: 2px;
 }
 
 header p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 300;
   max-width: 800px;
-  line-height: 1.8;
+  line-height: 1.5;
   color: #ccc;
 }
 
@@ -283,7 +274,7 @@ h2 {
 
 /* === CARD STYLE === */
 .card {
-  background: #2f3244; /* New dark blue-gray */
+  background: #2f3244;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -306,20 +297,8 @@ h2 {
 
 .card-content {
   padding: 20px;
-  background-color: #2f3244; /* Same dark background for content */
+  background-color: #2f3244;
   color: white;
-}
-
-.card-content h2 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: white;
-}
-
-.card-content p {
-  font-size: 0.95rem;
-  color: #ccc;
 }
 
 .card-content h2 {
