@@ -24,9 +24,9 @@ body * {
   background: url('../assets/themes2.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
-  padding: 140px 20px 100px;
-  text-align: left;
+  padding: 140px 0 100px;
   color: white;
+  text-align: left;
 }
 
 .hero-section::before {
@@ -34,8 +34,16 @@ body * {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(15, 27, 51, 0.7);
+  background: rgba(15, 27, 51, 0.7); /* dark overlay */
   z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
 }
 
 .hero-section h1 {
@@ -50,7 +58,7 @@ body * {
   font-size: 1.2rem;
   font-weight: 300;
   max-width: 800px;
-  margin: 0 auto;
+  margin-top: 10px;
   color: #f0f0f0;
   text-transform: uppercase;
   letter-spacing: 1px;
