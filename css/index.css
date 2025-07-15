@@ -442,3 +442,37 @@ h2 {
   background: #ffd700;
   color: #0d172b;
 }
+
+/* === EXPLORE BUTTON OUTSIDE CARD === */
+.explore-btn.from-about {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.explore-btn.from-about:hover {
+  color: #ffd700;
+}
+
+.explore-btn.from-about .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  font-size: 16px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.explore-btn.from-about:hover .arrow {
+  background: #ffd700;
+  color: #0d172b;
+}
