@@ -292,7 +292,7 @@ h2 {
 
 /* === CARD STYLE === */
 .card {
-  background: #2f3244;
+  background: #0d172b; /* updated to match background */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -315,7 +315,7 @@ h2 {
 
 .card-content {
   padding: 20px;
-  background-color: #2f3244;
+  background-color: #0d172b; /* updated to match */
   color: white;
 }
 
@@ -327,7 +327,7 @@ h2 {
 
 .card-content p {
   font-size: 0.95rem;
-  color: #ccc;
+  color: #d0d0d0; /* lighter gray for better contrast */
 }
 
 /* === RESPONSIVE === */
