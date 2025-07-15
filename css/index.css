@@ -361,7 +361,7 @@ h2 {
 /* === UPDATED POWER BI CARD STYLE === */
 .category-card.powerbi {
   width: 500px;
-  height: 500px; /* taller card */
+  height: 540px; /* taller card */
   background-color: #0d172b;
   border-radius: 12px;
   display: flex;
