@@ -351,20 +351,28 @@ h2 {
     font-size: 2rem;
   }
 
-  /* === POWER BI CARD CUSTOM STYLE === */
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
+
+
+/* === UPDATED POWER BI CARD STYLE === */
 .category-card.powerbi {
   width: 360px;
-  height: 500px;
+  height: 580px; /* taller card */
   background-color: #0d172b;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .category-card.powerbi img {
   width: 100%;
-  height: 240px;
+  height: 250px; /* slightly taller */
   object-fit: cover;
+  object-position: top; /* crop from top */
 }
 
 .category-card.powerbi .card-content {
@@ -400,16 +408,17 @@ h2 {
   margin-bottom: 30px;
 }
 
+/* LET’S GO!! Button Styling */
 .category-card.powerbi .explore-btn {
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1rem;
-  color: white;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  transition: color 0.3s ease;
+  gap: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  margin-top: auto;
 }
 
 .category-card.powerbi .explore-btn:hover {
@@ -417,10 +426,18 @@ h2 {
 }
 
 .category-card.powerbi .arrow {
-  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  font-size: 16px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-  .hero-section p {
-    font-size: 1rem;
-  }
+.category-card.powerbi .explore-btn:hover .arrow {
+  background: #ffd700;
+  color: #0d172b;
 }
