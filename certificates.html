@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificates - Nhu Ngoc</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- MENU TOGGLE -->
+  <div id="menu-button" class="menu-toggle">
+    <span>MENU</span> <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- MENU POPUP -->
+  <div id="menu-popup" class="menu-popup hidden">
+    <div class="menu-content">
+      <div class="menu-header">
+        <h2>MENU</h2>
+        <span id="close-menu" class="close-icon">&times;</span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="index.html" class="menu-link">HOME</a></li>
+        <li><a href="about.html" class="menu-link">ABOUT ME</a></li>
+        <li><a href="certificates.html" class="menu-link">CERTIFICATES</a></li>
+        <li><a href="projects.html" class="menu-link">PROJECTS</a></li>
+        <li><a href="#contact" class="menu-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section">
+    <div class="container">
+      <h1>MY CERTIFICATES</h1>
+      <p>VALIDATING MY EXPERTISE IN DATA, CLOUD, AND ANALYTICS THROUGH STRUCTURED LEARNING</p>
+    </div>
+  </header>
+
+  <!-- CERTIFICATES SECTION -->
+  <section id="certificates">
+    <div class="container">
+      <h2>CERTIFICATES</h2>
+      <p>I have completed several certifications to build and validate my skills in data analysis, visualization, and cloud tools — including structured programs on Coursera and hands-on practice through HackerRank challenges.</p>
+
+      <div class="grid" id="certificateGrid">
+        <!-- Certificate 1 -->
+        <div class="card category-card powerbi">
+          <img src="assets/certificate-google.jpg" alt="Google Data Analytics">
+          <div class="card-content">
+            <h3>GOOGLE</h3>
+            <hr>
+            <p class="project-title">GOOGLE DATA ANALYTICS PROFESSIONAL CERTIFICATE</p>
+            <a href="#" class="explore-btn">
+              <span class="arrow">➤</span> VIEW CREDENTIAL
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="card category-card powerbi">
+          <img src="assets/certificate-coursera.jpg" alt="Coursera Certificate">
+          <div class="card-content">
+            <h3>COURSERA</h3>
+            <hr>
+            <p class="project-title">SQL FOR DATA SCIENCE – COURSERA</p>
+            <a href="#" class="explore-btn">
+              <span class="arrow">➤</span> VIEW CREDENTIAL
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="card category-card powerbi">
+          <img src="assets/certificate-hackerrank.jpg" alt="HackerRank">
+          <div class="card-content">
+            <h3>HACKERRANK</h3>
+            <hr>
+            <p class="project-title">SQL (BASIC + INTERMEDIATE) SKILLS CERTIFICATION</p>
+            <a href="#" class="explore-btn">
+              <span class="arrow">➤</span> VIEW CREDENTIAL
+            </a>
+          </div>
+        </div>
+
+        <!-- Add more certificates as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional Contact Footer -->
+  <section id="contact">
+    <div class="container custom-footer">
+      <h2>GET IN TOUCH</h2>
+      <p class="description">Let's chat! Your data, my brain – together we can be unstoppable.</p>
+      <div class="contact-info">
+        <div><i class="fas fa-home"></i> Ho Chi Minh City, Vietnam</div>
+        <div><i class="fas fa-envelope"></i> <a href="mailto:nhungoc0409go@gmail.com">nhungoc0409go@gmail.com</a></div>
+        <div><i class="fab fa-github"></i> <a href="https://github.com/ngocnguyen49" target="_blank">github.com/ngocnguyen49</a></div>
+        <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ngoc-nguyen-57319120b/" target="_blank">linkedin.com/in/ngoc-nguyen-57319120b</a></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // MENU TOGGLE
+    const menuBtn = document.getElementById("menu-button");
+    const menuPopup = document.getElementById("menu-popup");
+    const closeMenu = document.getElementById("close-menu");
+    const menuLinks = document.querySelectorAll(".menu-link");
+
+    menuBtn.addEventListener("click", () => {
+      menuPopup.classList.remove("hidden");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      menuPopup.classList.add("hidden");
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        menuPopup.classList.add("hidden");
+      });
+    });
+  </script>
+</body>
+</html>
