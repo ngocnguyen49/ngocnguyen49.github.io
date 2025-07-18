@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me | Nhu Ngoc</title>
+  <link rel="stylesheet" href="css/index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -16,24 +17,119 @@
       padding: 0;
     }
 
+    /* === HERO SECTION === */
+    .hero-section {
+      background: url('assets/themes2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      padding: 140px 20px 100px;
+      text-align: left;
+      color: white;
+    }
+
+    .hero-section::before {
+      content: '';
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+
+    .hero-section .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-section h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ffd700;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      line-height: 1.8;
+    }
+
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #ffd700;
+      color: #0d172b;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+    .menu-popup {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: 100%;
+      background-color: #0b1426;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 999;
+    }
+
+    .menu-popup.show {
+      transform: translateX(0);
+    }
+
+    .menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #444;
+    }
+
+    .menu-links {
+      list-style: none;
+      padding: 20px;
+    }
+
+    .menu-links li {
+      margin: 15px 0;
+    }
+
+    .menu-link {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .menu-link:hover {
+      color: #ffd700;
+    }
+
+    .close-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
     .about-container {
       max-width: 1000px;
       margin: 80px auto;
       padding: 0 20px;
     }
 
-    h1, h2 {
-      font-size: 2.5rem;
-      text-transform: uppercase;
+    h2 {
+      font-size: 2rem;
+      margin-top: 60px;
       border-bottom: 2px solid #ffd700;
       display: inline-block;
       padding-bottom: 10px;
       margin-bottom: 30px;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-top: 60px;
     }
 
     .about-text, .education-text {
@@ -109,43 +205,60 @@
     }
 
     @media (max-width: 768px) {
-      h1 {
+      .hero-section h1 {
         font-size: 2rem;
+      }
+
+      .hero-section p,
+      .about-text, .education-text {
+        font-size: 1rem;
       }
 
       h2 {
         font-size: 1.6rem;
-      }
-
-      .about-text, .education-text {
-        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- MENU TOGGLE -->
+  <div id="menu-button" class="menu-toggle">
+    <span>MENU</span> <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- MENU POPUP -->
+  <div id="menu-popup" class="menu-popup">
+    <div class="menu-header">
+      <h2>MENU</h2>
+      <span id="close-menu" class="close-icon">&times;</span>
+    </div>
+    <ul class="menu-links">
+      <li><a href="index.html" class="menu-link">HOME</a></li>
+      <li><a href="about.html" class="menu-link">ABOUT ME</a></li>
+      <li><a href="certificates.html" class="menu-link">CERTIFICATES</a></li>
+      <li><a href="projects.html" class="menu-link">PROJECTS</a></li>
+      <li><a href="#contact" class="menu-link">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section">
+    <div class="container">
+      <h1>ABOUT ME</h1>
+      <p>Exploring data with curiosity, statistics, and storytelling.</p>
+    </div>
+  </header>
+
+  <!-- ABOUT CONTENT -->
   <div class="about-container">
-    <h1>About Me</h1>
     <div class="about-text">
-      <p>
-        Hello! I’m <strong>Nhu Ngoc</strong>, a curious and passionate Data Analyst with a growing interest in solving real-world problems through data. I enjoy working with numbers, patterns, and turning raw information into valuable insights.
-      </p>
-      <p>
-        I believe in continuous learning and growth. Whether it's SQL queries, dashboards, or exploring new tools, I’m always eager to improve and explore. I'm particularly drawn to projects that have impact and meaning.
-      </p>
-      <p>
-        My background in <strong>statistics and mathematics</strong> gives me the foundation to understand data deeply — especially when applying techniques like <strong>A/B testing</strong> to optimize performance and drive decisions.
-      </p>
-      <p>
-        I’ve developed strong domain expertise in analyzing <strong>user behavior</strong> within the <strong>insurance industry</strong>, identifying churn risks and optimizing customer journeys. I also apply <strong>natural language processing (NLP)</strong> for use cases like <strong>sales conversation analysis</strong> and intent detection, helping businesses uncover insights from unstructured data.
-      </p>
-      <p>
-        In every dataset, there's a story to discover — and I’m here to tell it with purpose.
-      </p>
-      <p class="quote">
-        "I don’t just work with data — I give it a voice."
-      </p>
+      <p>Hello! I’m <strong>Nhu Ngoc</strong>, a curious and passionate Data Analyst with a growing interest in solving real-world problems through data. I enjoy working with numbers, patterns, and turning raw information into valuable insights.</p>
+      <p>I believe in continuous learning and growth. Whether it's SQL queries, dashboards, or exploring new tools, I’m always eager to improve and explore. I'm particularly drawn to projects that have impact and meaning.</p>
+      <p>My background in <strong>statistics and mathematics</strong> gives me the foundation to understand data deeply — especially when applying techniques like <strong>A/B testing</strong> to optimize performance and drive decisions.</p>
+      <p>I’ve developed strong domain expertise in analyzing <strong>user behavior</strong> within the <strong>insurance industry</strong>, identifying churn risks and optimizing customer journeys. I also apply <strong>natural language processing (NLP)</strong> for use cases like <strong>sales conversation analysis</strong> and intent detection, helping businesses uncover insights from unstructured data.</p>
+      <p>In every dataset, there's a story to discover — and I’m here to tell it with purpose.</p>
+      <p class="quote">"I don’t just work with data — I give it a voice."</p>
     </div>
 
     <h2>Education</h2>
@@ -159,7 +272,7 @@
   </div>
 
   <!-- Footer Section -->
-  <footer>
+  <footer id="contact">
     <h2>GET IN TOUCH</h2>
     <p class="description">Let's chat! Your data, my brain – together we can be unstoppable.</p>
     <div class="contact-info">
@@ -170,5 +283,25 @@
     </div>
   </footer>
 
+  <script>
+    const menuBtn = document.getElementById("menu-button");
+    const menuPopup = document.getElementById("menu-popup");
+    const closeMenu = document.getElementById("close-menu");
+    const menuLinks = document.querySelectorAll(".menu-link");
+
+    menuBtn.addEventListener("click", () => {
+      menuPopup.classList.add("show");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      menuPopup.classList.remove("show");
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        menuPopup.classList.remove("show");
+      });
+    });
+  </script>
 </body>
 </html>
