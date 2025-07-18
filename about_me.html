@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Me | Nhu Ngoc</title>
   <link rel="stylesheet" href="css/index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,49 @@
       padding: 0;
     }
 
-    /* === HERO SECTION === */
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #ffd700;
+      color: #0d172b;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+    .modal-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 23, 43, 0.95);
+      z-index: 999;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .modal-menu.active {
+      display: block;
+    }
+
+    .modal-nav a {
+      display: block;
+      font-size: 24px;
+      color: white;
+      margin: 20px 0;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .modal-nav a:hover {
+      color: #ffd700;
+    }
+
     .hero-section {
       background: url('assets/themes2.jpg') no-repeat center center fixed;
       background-size: cover;
@@ -53,68 +95,6 @@
       font-size: 1.2rem;
       max-width: 700px;
       line-height: 1.8;
-    }
-
-    .menu-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: #ffd700;
-      color: #0d172b;
-      padding: 10px 20px;
-      border-radius: 4px;
-      font-weight: bold;
-      z-index: 1000;
-      cursor: pointer;
-    }
-
-    .menu-popup {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 280px;
-      height: 100%;
-      background-color: #0b1426;
-      box-shadow: -2px 0 10px rgba(0,0,0,0.5);
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-      z-index: 999;
-    }
-
-    .menu-popup.show {
-      transform: translateX(0);
-    }
-
-    .menu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      border-bottom: 1px solid #444;
-    }
-
-    .menu-links {
-      list-style: none;
-      padding: 20px;
-    }
-
-    .menu-links li {
-      margin: 15px 0;
-    }
-
-    .menu-link {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-
-    .menu-link:hover {
-      color: #ffd700;
-    }
-
-    .close-icon {
-      font-size: 24px;
-      cursor: pointer;
     }
 
     .about-container {
@@ -223,23 +203,17 @@
 <body>
 
   <!-- MENU TOGGLE -->
-  <div id="menu-button" class="menu-toggle">
-    <span>MENU</span> <i class="fas fa-bars"></i>
-  </div>
+  <div class="menu-toggle" id="menu-toggle">MENU</div>
 
-  <!-- MENU POPUP -->
-  <div id="menu-popup" class="menu-popup">
-    <div class="menu-header">
-      <h2>MENU</h2>
-      <span id="close-menu" class="close-icon">&times;</span>
-    </div>
-    <ul class="menu-links">
-      <li><a href="index.html" class="menu-link">HOME</a></li>
-      <li><a href="about.html" class="menu-link">ABOUT ME</a></li>
-      <li><a href="certificates.html" class="menu-link">CERTIFICATES</a></li>
-      <li><a href="projects.html" class="menu-link">PROJECTS</a></li>
-      <li><a href="#contact" class="menu-link">CONTACT</a></li>
-    </ul>
+  <!-- MODAL MENU (same as certificates.html) -->
+  <div class="modal-menu" id="modal-menu">
+    <nav class="modal-nav">
+      <a href="index.html">HOME</a>
+      <a href="about_me.html">ABOUT ME</a>
+      <a href="certificates.html">CERTIFICATES</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
   </div>
 
   <!-- HERO SECTION -->
@@ -283,23 +257,18 @@
     </div>
   </footer>
 
+  <!-- Menu Toggle Script -->
   <script>
-    const menuBtn = document.getElementById("menu-button");
-    const menuPopup = document.getElementById("menu-popup");
-    const closeMenu = document.getElementById("close-menu");
-    const menuLinks = document.querySelectorAll(".menu-link");
+    const menuToggle = document.getElementById('menu-toggle');
+    const modalMenu = document.getElementById('modal-menu');
 
-    menuBtn.addEventListener("click", () => {
-      menuPopup.classList.add("show");
+    menuToggle.addEventListener('click', () => {
+      modalMenu.classList.toggle('active');
     });
 
-    closeMenu.addEventListener("click", () => {
-      menuPopup.classList.remove("show");
-    });
-
-    menuLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        menuPopup.classList.remove("show");
+    modalMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        modalMenu.classList.remove('active');
       });
     });
   </script>
