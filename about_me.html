@@ -3,274 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me | Nhu Ngoc</title>
-  <link rel="stylesheet" href="css/index.css" />
+  <title>About Me - Nhu Ngoc</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #0d172b;
-      color: white;
-      margin: 0;
-      padding: 0;
+    /* Yellow strong text */
+    strong {
+      color: #f9ca24;
+      font-weight: bold;
     }
 
-    .menu-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: transparent;
-      color: #ffd700;
-      font-size: 28px;
-      border: none;
-      z-index: 1001;
-      cursor: pointer;
-    }
-
-    .modal-menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(13, 23, 43, 0.97);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-menu.active {
-      display: flex;
-    }
-
-    .modal-nav a {
-      display: block;
-      font-size: 2rem;
-      color: #fff;
-      margin: 20px;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .modal-nav a:hover {
-      color: #ffd700;
-    }
-
+    /* Hero Section */
     .hero-section {
       background: url('assets/themes2.jpg') no-repeat center center fixed;
       background-size: cover;
       position: relative;
       padding: 140px 20px 100px;
-      text-align: center;
+      text-align: left;
       color: white;
     }
 
     .hero-section::before {
-      content: '';
-      background-color: rgba(0, 0, 0, 0.5);
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      z-index: 0;
-    }
-
-    .hero-section .container {
-      position: relative;
+      background-color: rgba(13, 23, 43, 0.9);
       z-index: 1;
     }
 
-    .hero-section h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #ffd700;
-    }
-
-    .hero-section p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      line-height: 1.8;
+    .hero-section .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
       margin: 0 auto;
     }
 
-    .about-container {
-      max-width: 1000px;
-      margin: 80px auto;
-      padding: 0 20px;
+    /* Menu popup */
+    .menu-popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(13, 23, 43, 0.95);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-top: 60px;
-      border-bottom: 2px solid #ffd700;
-      display: inline-block;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }
-
-    .about-text, .education-text {
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    .about-text strong {
-      color: #ffd700;
-    }
-
-    .quote {
-      margin-top: 40px;
-      font-style: italic;
-      color: #ccc;
-      border-left: 4px solid #ffd700;
-      padding-left: 15px;
-    }
-
-    .education-item {
-      margin-bottom: 20px;
-    }
-
-    .education-item h3 {
-      font-size: 1.2rem;
-      color: #ffd700;
-      margin-bottom: 5px;
-    }
-
-    .education-item p {
-      margin: 0;
-      color: #ccc;
-    }
-
-    footer {
-      background-color: #0b1426;
-      padding: 60px 20px;
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    footer h2 {
-      font-size: 2rem;
-      color: #ffd700;
-      margin-bottom: 10px;
-      border-bottom: none;
-      text-transform: uppercase;
-    }
-
-    .description {
-      font-size: 1.1rem;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-
-    .contact-info {
-      font-size: 1rem;
-      line-height: 2;
-    }
-
-    .contact-info a {
+    .menu-popup a {
       color: white;
+      font-size: 24px;
+      margin: 10px 0;
       text-decoration: none;
     }
 
-    .contact-info a:hover {
-      text-decoration: underline;
+    .menu-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      z-index: 1000;
     }
 
-    .contact-info i {
-      margin-right: 8px;
-      color: #ffd700;
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 36px;
+      background: none;
+      border: none;
+      cursor: pointer;
     }
 
-    @media (max-width: 768px) {
-      .hero-section h1 {
-        font-size: 2rem;
-      }
-
-      .hero-section p,
-      .about-text, .education-text {
-        font-size: 1rem;
-      }
-
-      h2 {
-        font-size: 1.6rem;
-      }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #0d172b;
+      color: white;
     }
   </style>
 </head>
 <body>
-  <!-- MENU TOGGLE -->
-  <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+  <!-- Menu Toggle Button -->
+  <button class="menu-toggle" onclick="document.getElementById('menu').style.display='flex'">&#9776;</button>
 
-  <!-- MODAL MENU -->
-  <div class="modal-menu" id="modal-menu">
-    <nav class="modal-nav">
-      <a href="index.html">HOME</a>
-      <a href="about_me.html">ABOUT ME</a>
-      <a href="certificates.html">CERTIFICATES</a>
-      <a href="projects.html">PROJECTS</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
+  <!-- Menu Popup -->
+  <div id="menu" class="menu-popup">
+    <button class="close-btn" onclick="document.getElementById('menu').style.display='none'">&times;</button>
+    <a href="index.html">HOME</a>
+    <a href="about_me.html">ABOUT ME</a>
+    <a href="certificates.html">CERTIFICATES</a>
+    <a href="projects.html">PROJECTS</a>
+    <a href="contact.html">CONTACT</a>
   </div>
 
-  <!-- HERO SECTION -->
-  <header class="hero-section">
-    <div class="container">
-      <h1>ABOUT ME</h1>
-      <p>Exploring data with curiosity, statistics, and storytelling.</p>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>About Me</h1>
+      <p>
+        My background in <strong>statistics and mathematics</strong> gives me the foundation to understand data deeply. 
+        I also have experience in designing and analyzing <strong>A/B testing</strong> to improve product performance and user experience.
+      </p>
+      <p>
+        I'm passionate about understanding <strong>user behavior</strong> in domains like insurance, e-commerce, and gaming, and applying techniques like NLP to uncover insights and improve sales processes.
+      </p>
     </div>
-  </header>
+  </section>
 
-  <!-- ABOUT CONTENT -->
-  <div class="about-container">
-    <div class="about-text">
-      <p>Hello! I’m <strong>Nhu Ngoc</strong>, a curious and passionate Data Analyst with a growing interest in solving real-world problems through data. I enjoy working with numbers, patterns, and turning raw information into valuable insights.</p>
-      <p>I believe in continuous learning and growth. Whether it's SQL queries, dashboards, or exploring new tools, I’m always eager to improve and explore. I'm particularly drawn to projects that have impact and meaning.</p>
-      <p>My background in <strong>statistics and mathematics</strong> gives me the foundation to understand data deeply — especially when applying techniques like <strong>A/B testing</strong> to optimize performance and drive decisions.</p>
-      <p>I’ve developed strong domain expertise in analyzing <strong>user behavior</strong> within the <strong>insurance industry</strong>, identifying churn risks and optimizing customer journeys. I also apply <strong>natural language processing (NLP)</strong> for use cases like <strong>sales conversation analysis</strong> and intent detection, helping businesses uncover insights from unstructured data.</p>
-      <p>In every dataset, there's a story to discover — and I’m here to tell it with purpose.</p>
-      <p class="quote">"I don’t just work with data — I give it a voice."</p>
-    </div>
-
-    <h2>Education</h2>
-    <div class="education-text">
-      <div class="education-item">
-        <h3>Bachelor of Statistics</h3>
-        <p>University of Economics Ho Chi Minh City</p>
-        <p>2018 – 2022</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer Section -->
-  <footer id="contact">
-    <h2>GET IN TOUCH</h2>
-    <p class="description">Let's chat! Your data, my brain – together we can be unstoppable.</p>
-    <div class="contact-info">
-      <div><i class="fas fa-home"></i> Ho Chi Minh City, Vietnam</div>
-      <div><i class="fas fa-envelope"></i> <a href="mailto:nhungoc0409go@gmail.com">nhungoc0409go@gmail.com</a></div>
-      <div><i class="fab fa-github"></i> <a href="https://github.com/ngocnguyen49" target="_blank">github.com/ngocnguyen49</a></div>
-      <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ngoc-nguyen-57319120b/" target="_blank">linkedin.com/in/ngoc-nguyen-57319120b</a></div>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>Get in touch: <a href="mailto:your-email@example.com" style="color: #f9ca24;">your-email@example.com</a></p>
   </footer>
 
-  <!-- Menu Toggle Script -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const modalMenu = document.getElementById('modal-menu');
-
-    menuToggle.addEventListener('click', () => {
-      modalMenu.classList.toggle('active');
-    });
-
-    modalMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        modalMenu.classList.remove('active');
-      });
-    });
-  </script>
 </body>
 </html>
