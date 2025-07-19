@@ -4,18 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Banking & Financial Analytics</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <h1>Banking & Financial Analytics</h1>
+  <!-- MENU TOGGLE -->
+  <div id="menu-button" class="menu-toggle">
+    <span>MENU</span> <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- MENU POPUP -->
+  <div id="menu-popup" class="menu-popup hidden">
+    <div class="menu-content">
+      <div class="menu-header">
+        <h2>MENU</h2>
+        <span id="close-menu" class="close-icon">&times;</span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="index.html" class="menu-link">HOME</a></li>
+        <li><a href="about.html" class="menu-link">ABOUT ME</a></li>
+        <li><a href="certificates.html" class="menu-link">CERTIFICATES</a></li>
+        <li><a href="projects.html" class="menu-link">PROJECTS</a></li>
+        <li><a href="#contact" class="menu-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+
+   <!-- HERO SECTION -->
+  <header class="hero-section">
+    <div class="container">
+      <h1>BANKING FINANCIAL BEHAVIOR USER DETECTION</h1>
       <p>Leveraging SQL to deliver insights on customer behavior, transaction trends, and performance metrics in the financial sector.</p>
     </div>
-  </section>
+  </header>
 
   <!-- Projects Section -->
   <section id="projects" class="section">
@@ -49,14 +72,40 @@
     </div>
   </section>
 
-  <!-- Get in Touch Section -->
-  <section id="contact" class="section">
-    <div class="contact-container">
-      <h2 class="section-title">Get in Touch</h2>
-      <p>If you’re looking for a data analyst with experience in financial services, let’s connect!</p>
-      <a href="mailto:your.email@example.com" class="button">Contact Me</a>
+  <!-- Optional Contact Footer -->
+  <section id="contact">
+    <div class="container custom-footer">
+      <h2>GET IN TOUCH</h2>
+      <p class="description">Let's chat! Your data, my brain – together we can be unstoppable.</p>
+      <div class="contact-info">
+        <div><i class="fas fa-home"></i> Ho Chi Minh City, Vietnam</div>
+        <div><i class="fas fa-envelope"></i> <a href="mailto:nhungoc0409go@gmail.com">nhungoc0409go@gmail.com</a></div>
+        <div><i class="fab fa-github"></i> <a href="https://github.com/ngocnguyen49" target="_blank">github.com/ngocnguyen49</a></div>
+        <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ngoc-nguyen-57319120b/" target="_blank">linkedin.com/in/ngoc-nguyen-57319120b</a></div>
+      </div>
     </div>
   </section>
 
+  <script>
+    // MENU TOGGLE
+    const menuBtn = document.getElementById("menu-button");
+    const menuPopup = document.getElementById("menu-popup");
+    const closeMenu = document.getElementById("close-menu");
+    const menuLinks = document.querySelectorAll(".menu-link");
+
+    menuBtn.addEventListener("click", () => {
+      menuPopup.classList.remove("hidden");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      menuPopup.classList.add("hidden");
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        menuPopup.classList.add("hidden");
+      });
+    });
+  </script>
 </body>
 </html>
