@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Nhu Ngoc</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- MENU TOGGLE -->
+  <div id="menu-button" class="menu-toggle">
+    <span>MENU</span> <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- MENU POPUP -->
+  <div id="menu-popup" class="menu-popup hidden">
+    <div class="menu-content">
+      <div class="menu-header">
+        <h2>MENU</h2>
+        <span id="close-menu" class="close-icon">&times;</span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="index.html" class="menu-link">HOME</a></li>
+        <li><a href="about.html" class="menu-link">ABOUT ME</a></li>
+        <li><a href="certificates.html" class="menu-link">CERTIFICATES</a></li>
+        <li><a href="projects.html" class="menu-link">PROJECTS</a></li>
+        <li><a href="#contact" class="menu-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- HERO SECTION -->
+  <header class="hero-section">
+    <div class="container">
+      <h1>PROJECTS</h1>
+      <p>SHOWCASE MY SKILLS</p>
+    </div>
+  </header>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <div class="container">
+      <h2>PROJECTS</h2>
+
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="powerbi">POWER BI</button>
+        <button class="filter-btn" data-category="sql">SQL</button>
+        <button class="filter-btn" data-category="python">PYTHON</button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid powerbi-style" id="projectGrid">
+        <!-- Project 1 -->
+        <div class="card category-card powerbi" data-category="powerbi">
+          <img src="assets/ecommerce-thumbail.jpg" alt="E-commerce Beauty Project">
+          <div class="card-content">
+            <h3>PROJECT 1</h3>
+            <hr>
+            <p class="project-title">E-COMMERCE DASHBOARD: BEAUTY SALES ANALYSIS || POWER BI</p>
+            <a href="ecommerce_beauty.html" class="explore-btn">
+              <span class="arrow">➤</span> LET'S EXPLORE!!
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card category-card powerbi" data-category="powerbi">
+          <img src="assets/email-thumbail.jpg" alt="Email Performance Project">
+          <div class="card-content">
+            <h3>PROJECT 2</h3>
+            <hr>
+            <p class="project-title">EMAIL PERFORMANCE ANALYSIS DASHBOARD || POWER BI</p>
+            <a href="email_performance.html" class="explore-btn">
+              <span class="arrow">➤</span> LET'S EXPLORE!!
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card category-card python" data-category="python">
+          <img src="assets/game-thumbail.jpg" alt="Game Retention A/B Testing Project">
+          <div class="card-content">
+            <h3>PROJECT 3</h3>
+            <hr>
+            <p class="project-title">GAME RETENTION – USING A/B TESTING || PYTHON</p>
+            <a href="game_ab_test.html" class="explore-btn">
+              <span class="arrow">➤</span> LET'S EXPLORE!!
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="card category-card sql" data-category="sql">
+          <img src="assets/banking-thumbail.jpg" alt="Banking Financial Behavior Project">
+          <div class="card-content">
+            <h3>PROJECT 4</h3>
+            <hr>
+            <p class="project-title">BANKING – FINANCIAL BEHAVIOR ANALYSIS || SQL</p>
+            <a href="banking_financial.html" class="explore-btn">
+              <span class="arrow">➤</span> LET'S EXPLORE!!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="container custom-footer">
+      <h2>GET IN TOUCH</h2>
+      <p class="description">Let's chat! Your data, my brain – together we can be unstoppable.</p>
+      <div class="contact-info">
+        <div><i class="fas fa-home"></i> Ho Chi Minh City, Vietnam</div>
+        <div><i class="fas fa-envelope"></i> <a href="mailto:nhungoc0409go@gmail.com">nhungoc0409go@gmail.com</a></div>
+        <div><i class="fab fa-github"></i> <a href="https://github.com/ngocnguyen49" target="_blank">github.com/ngocnguyen49</a></div>
+        <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ngoc-nguyen-57319120b/" target="_blank">linkedin.com/in/ngoc-nguyen-57319120b</a></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // MENU TOGGLE
+    const menuBtn = document.getElementById("menu-button");
+    const menuPopup = document.getElementById("menu-popup");
+    const closeMenu = document.getElementById("close-menu");
+    const menuLinks = document.querySelectorAll(".menu-link");
+
+    menuBtn.addEventListener("click", () => {
+      menuPopup.classList.remove("hidden");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      menuPopup.classList.add("hidden");
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        menuPopup.classList.add("hidden");
+      });
+    });
+
+    // FILTER FUNCTIONALITY
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.category-card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const category = btn.getAttribute('data-category');
+        cards.forEach(card => {
+          card.style.display = (category === 'all' || card.getAttribute('data-category') === category)
+            ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
