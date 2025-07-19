@@ -8,6 +8,29 @@
 </head>
 <body>
 
+ <!-- MENU TOGGLE -->
+  <div id="menu-button" class="menu-toggle">
+    <span>MENU</span> <i class="fas fa-bars"></i>
+  </div>
+  
+  <!-- MENU POPUP -->
+  <div id="menu-popup" class="menu-popup hidden">
+    <div class="menu-content">
+      <div class="menu-header">
+        <h2>MENU</h2>
+        <span id="close-menu" class="close-icon">&times;</span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="index.html" class="menu-link">HOME</a></li>
+        <li><a href="about.html" class="menu-link">ABOUT ME</a></li>
+        <li><a href="certificates.html" class="menu-link">CERTIFICATES</a></li>
+        <li><a href="projects.html" class="menu-link">PROJECTS</a></li>
+        <li><a href="#contact" class="menu-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+  
+
   <div class="hero-section">
     <div class="container">
       <header>
@@ -37,8 +60,6 @@
         <ul>
           <li>Removing duplicates and handling missing values</li>
           <li>Converting date fields for proper time-based analysis</li>
-          <li>Creating new columns like Year, Month, Profit Margin</li>
-          <li>Standardizing region and category names</li>
         </ul>
       </section>
 
@@ -96,3 +117,26 @@
     </div>
   </div>
 </footer>
+
+ <script>
+    const menuBtn = document.getElementById("menu-button");
+    const menuPopup = document.getElementById("menu-popup");
+    const closeMenu = document.getElementById("close-menu");
+    const menuLinks = document.querySelectorAll(".menu-link");
+
+    menuBtn.addEventListener("click", () => {
+      menuPopup.classList.remove("hidden");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      menuPopup.classList.add("hidden");
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        menuPopup.classList.add("hidden");
+      });
+    });
+  </script>
+</body>
+</html>
