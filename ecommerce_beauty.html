@@ -8,40 +8,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- MENU TOGGLE -->
-  <div id="menu-button" class="menu-toggle">
-    <span>MENU</span> <i class="fas fa-bars"></i>
+  <!-- Menu Toggle Button -->
+  <div class="menu-toggle" onclick="document.getElementById('menuPopup').classList.remove('hidden')">
+    <i class="fas fa-bars"></i> MENU
   </div>
   
-  <!-- MENU POPUP -->
-  <div id="menu-popup" class="menu-popup hidden">
+  <!-- Menu Popup -->
+  <div id="menuPopup" class="menu-popup hidden">
     <div class="menu-content">
       <div class="menu-header">
-        <h2>MENU</h2>
-        <span id="close-menu" class="close-icon">&times;</span>
+        <h2>Navigation</h2>
+        <span class="close-icon" onclick="document.getElementById('menuPopup').classList.add('hidden')">&times;</span>
       </div>
       <ul class="menu-links">
-        <li><a href="index.html" class="menu-link">HOME</a></li>
-        <li><a href="about.html" class="menu-link">ABOUT ME</a></li>
-        <li><a href="certificates.html" class="menu-link">CERTIFICATES</a></li>
-        <li><a href="projects.html" class="menu-link">PROJECTS</a></li>
-        <li><a href="#contact" class="menu-link">CONTACT</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about_me.html">ABOUT ME</a></li>
+        <li><a href="certificates.html">CERTIFICATES</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
       </ul>
     </div>
   </div>
-  
 
-
-  <div class="hero-section">
+  <!-- HERO SECTION -->
+  <header class="hero-section">
     <div class="container">
-      <header>
-        <h1>PROJECT: E-COMMERCE-BEAUTY ANALYSIS</h1>
-        <h2>E-COMMERCE BEAUTY DASHBOARD || POWER BI</h2>
-      </header>
+      <h1>PROJECT: E-COMMERCE-BEAUTY ANALYSIS</h1>
+      <p>E-COMMERCE BEAUTY DASHBOARD || POWER BI</p>
     </div>
-  </div>
+  </header>
 
-  <main>
     <div class="container">
       <section>
         <h2>BACKGROUND INFORMATION</h2>
