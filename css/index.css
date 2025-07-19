@@ -492,3 +492,22 @@ h2 {
 .github-button:hover {
   background-color: #218838;
 }
+
+/* === GENERAL IMAGE AND CONTAINER FIXES === */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container,
+main,
+section {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Prevent horizontal scroll on small screens */
+body {
+  overflow-x: hidden;
+}
