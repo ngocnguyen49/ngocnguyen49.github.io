@@ -281,6 +281,10 @@ h2 {
   background-color: #333;
   color: #fff;
 }
+.filter-buttons {
+  margin-top: 40px; /* Adjust this value to your preference */
+  text-align: center;
+}
 
 /* === PROJECT GRID === */
 .grid {
