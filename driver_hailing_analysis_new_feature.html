@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Analysis Project</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- Menu Toggle Button -->
+  <div class="menu-toggle" onclick="document.getElementById('menuPopup').classList.remove('hidden')">
+    <i class="fas fa-bars"></i> MENU
+  </div>
 
+  <!-- Menu Popup -->
+  <div id="menuPopup" class="menu-popup hidden">
+    <div class="menu-content">
+      <div class="menu-header">
+        <h2>Navigation</h2>
+        <span class="close-icon" onclick="document.getElementById('menuPopup').classList.add('hidden')">&times;</span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about_me.html">ABOUT ME</a></li>
+        <li><a href="certificates.html">CERTIFICATES</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section">
+    <div class="container">
+      <h1>PROJECT: PRODUCT ANALYSIS</h1>
+      <p>DATA-DRIVEN INSIGHTS & DASHBOARDS</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <h2>OVERVIEW</h2>
+        <p>This project focuses on conducting a product analysis to uncover actionable insights. It highlights business performance, customer behaviors, and market trends through structured data-driven evaluation.</p>
+      </section>
+
+      <section>
+        <h2>OBJECTIVES</h2>
+        <p>The main objective is to evaluate product performance across multiple dimensions. The project aims to identify key metrics, trends, and opportunities that drive growth and profitability.</p>
+      </section>
+
+      <section>
+        <h2>DATASET</h2>
+        <p>The dataset contains sales transactions, customer demographics, and product details. It includes fields such as product category, sales, profit, order date, region, and customer segment, enabling multi-level analysis.</p>
+      </section>
+
+      <section>
+        <h2>ASSUMPTION</h2>
+        <p>Assumptions made during analysis include:</p>
+        <ul>
+          <li>Data is complete and accurately represents business transactions.</li>
+          <li>Seasonality effects are consistent year over year.</li>
+          <li>No major changes occurred in product definitions or categories.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>ANALYSIS AND INSIGHTS</h2>
+        <p>Key findings from the analysis:</p>
+        <ul>
+          <li>Top-performing products consistently contribute to over 40% of revenue.</li>
+          <li>Customer retention rates are higher in the corporate segment compared to others.</li>
+          <li>Region-specific trends highlight Europe as a strong market for profitability, while Asia shows potential growth.</li>
+        </ul>
+        <img src="assets/analysis.PNG" alt="Analysis Dashboard Screenshot">
+      </section>
+
+      <section>
+        <h2>RECOMMENDATION</h2>
+        <p>Based on the insights, the following recommendations are made:</p>
+        <ul>
+          <li>Invest in expanding the product categories that show consistent profit margins.</li>
+          <li>Enhance loyalty programs for consumer and self-employed segments to improve retention.</li>
+          <li>Target emerging markets with customized marketing strategies to capture growth opportunities.</li>
+        </ul>
+      </section>
+
+      <section>
+        <a class="github-button" href="https://github.com/yourusername/product-analysis" target="_blank">See the Code on GitHub</a>
+      </section>
+    </div>
+  </main>
+
+  <!-- Optional Contact Footer -->
+  <section id="contact">
+    <div class="container custom-footer">
+      <h2>GET IN TOUCH</h2>
+      <p class="description">Let's chat! Your data, my brain – together we can be unstoppable.</p>
+      <div class="contact-info">
+        <div><i class="fas fa-home"></i> Your City, Your Country</div>
+        <div><i class="fas fa-envelope"></i> <a href="mailto:yourname@email.com">yourname@email.com</a></div>
+        <div><i class="fab fa-github"></i> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></div>
+        <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const menuBtn = document.getElementById("menu-button");
+    const menuPopup = document.getElementById("menu-popup");
+    const closeMenu = document.getElementById("close-menu");
+    const menuLinks = document.querySelectorAll(".menu-link");
+
+    menuBtn?.addEventListener("click", () => {
+      menuPopup.classList.remove("hidden");
+    });
+
+    closeMenu?.addEventListener("click", () => {
+      menuPopup.classList.add("hidden");
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        menuPopup.classList.add("hidden");
+      });
+    });
+  </script>
+</body>
+</html>
