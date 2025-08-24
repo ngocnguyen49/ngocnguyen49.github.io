@@ -83,24 +83,65 @@
 
       <section>
         <h2>ANALYSIS AND INSIGHTS</h2>
-        <p>Key findings from the analysis:</p>
-        <ul>
-          <li>Top-performing products consistently contribute to over 40% of revenue.</li>
-          <li>Customer retention rates are higher in the corporate segment compared to others.</li>
-          <li>Region-specific trends highlight Europe as a strong market for profitability, while Asia shows potential growth.</li>
-        </ul>
-        <img src="assets/analysis.PNG" alt="Analysis Dashboard Screenshot">
-      </section>
-
-      <section>
-        <h2>RECOMMENDATION</h2>
-        <p>Based on the insights, the following recommendations are made:</p>
-        <ul>
-          <li>Invest in expanding the product categories that show consistent profit margins.</li>
-          <li>Enhance loyalty programs for consumer and self-employed segments to improve retention.</li>
-          <li>Target emerging markets with customized marketing strategies to capture growth opportunities.</li>
-        </ul>
-      </section>
+        
+        <article>
+          <h3>a. Zero Session Analysis</h3>
+          <ul>
+            <li>
+              <p><strong>Zero Valid Rate:</strong> Calculated for Bike and Car transport across different outskirts.</p>
+              <img src="assets/zero_valid_rate.png" alt="Zero Valid Rate Chart">
+              <p class="insight">Insight: Cars in Hanoi outskirts have a higher zero valid rate compared to bikes.</p>
+            </li>
+            <li>
+              <p><strong>Weekly Trends:</strong> Trends observed over weeks for HCM and Hanoi outskirts.</p>
+              <img src="assets/weekly_trends.png" alt="Weekly Trends Chart">
+              <p class="insight">Insight: HCM shows stable trends, while Hanoi fluctuates significantly.</p>
+            </li>
+            <li>
+              <p><strong>Rebook Rate:</strong> Difference in rebook-within-10-mins rate between vehicle types.</p>
+              <img src="assets/rebook_rate.png" alt="Rebook Rate Comparison">
+              <p class="insight">Insight: Bikes rebook faster within 10 minutes compared to cars.</p>
+            </li>
+          </ul>
+        </article>
+      
+        <article>
+          <h3>b. Coverage Opportunity Estimation</h3>
+          <ul>
+            <li>
+              <p><strong>Range 1 vs Range 2:</strong> Simulate valid and potential sessions for Bike and Car.</p>
+              <img src="assets/range_simulation.png" alt="Range Simulation Chart">
+              <p class="insight">Insight: Bikes perform better in shorter ranges, while cars dominate in longer ranges.</p>
+            </li>
+            <li>
+              <p><strong>Conversion Rates:</strong> Estimate how many zero sessions could realistically be covered weekly.</p>
+              <img src="assets/conversion_rate.png" alt="Conversion Rate Estimation">
+              <p class="insight">Insight: Around 25% of zero sessions can be converted with better allocation.</p>
+            </li>
+          </ul>
+        </article>
+      
+        <article>
+          <h3>c. Cancellation & Risk Monitoring</h3>
+          <ul>
+            <li>
+              <p><strong>Cancellation Rates:</strong> Compare rider and driver cancellations (legacy vs forward dispatch).</p>
+              <img src="assets/cancellation_rate.png" alt="Cancellation Rate Comparison">
+              <p class="insight">Insight: Forward Dispatch reduced driver cancellations but slightly increased rider cancellations.</p>
+            </li>
+            <li>
+              <p><strong>ETA & Accept Distance:</strong> Estimate changes with Forward Dispatch.</p>
+              <img src="assets/eta_distance.png" alt="ETA and Accept Distance Change">
+              <p class="insight">Insight: ETA increased by ~30s, accept distance grew by 200m.</p>
+            </li>
+            <li>
+              <p><strong>Thresholds:</strong> Suggest acceptable thresholds based on trade-offs.</p>
+              <img src="assets/thresholds.png" alt="Suggested Thresholds">
+              <p class="insight">Insight: A balance of ≤10% cancellation and ≤1min ETA increase is optimal.</p>
+            </li>
+          </ul>
+        </article>
+</section>
 
       <section>
         <a class="github-button" href="https://github.com/yourusername/product-analysis" target="_blank">See the Code on GitHub</a>
