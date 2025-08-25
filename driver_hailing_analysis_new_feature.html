@@ -112,13 +112,20 @@
           <ul>
             <li>
               <p><strong>Range 1 vs Range 2:</strong> Simulate valid and potential sessions for Bike and Car.</p>
-              <img src="assets/range_simulation.png" alt="Range Simulation Chart">
-              <p class="insight">Insight: Bikes perform better in shorter ranges, while cars dominate in longer ranges.</p>
+              <img src="assets/driver3.PNG" alt="Range Simulation Chart">
+              <p class="insight">
+                Insight: <br>
+                Cars in range 2 had the higher in both valid rate and potential rate than cas in range 1. <br>
+                Bikes in range 2 had the higher in both valid rate and potential rate than bikes in range 1.
+              </p>
             </li>
             <li>
               <p><strong>Conversion Rates:</strong> Estimate how many zero sessions could realistically be covered weekly.</p>
-              <img src="assets/conversion_rate.png" alt="Conversion Rate Estimation">
-              <p class="insight">Insight: Around 25% of zero sessions can be converted with better allocation.</p>
+              <img src="assets/driver4.PNG" alt="Conversion Rate Estimation">
+              <p class="insight">Insight: Conversion rate showed a slight increase in week 45.</p>
+            </li>
+               <img src="assets/driver5.PNG" alt="Converage Rate Estimation">
+              <p class="insight">Insight: In week 45, coverage rate increased for Range 2, while Range 1 experienced a decline.</p>
             </li>
           </ul>
         </article>
@@ -128,18 +135,13 @@
           <ul>
             <li>
               <p><strong>Cancellation Rates:</strong> Compare rider and driver cancellations (legacy vs forward dispatch).</p>
-              <img src="assets/cancellation_rate.png" alt="Cancellation Rate Comparison">
-              <p class="insight">Insight: Forward Dispatch reduced driver cancellations but slightly increased rider cancellations.</p>
+              <img src="assets/driver6.PNG" alt="Cancellation Rate Comparison">
+              <p class="insight">Insight: For Forward type, rider cancellations were higher than driver cancellations, while in Legacy type, driver cancellations exceeded rider cancellations.</p>
             </li>
             <li>
-              <p><strong>ETA & Accept Distance:</strong> Estimate changes with Forward Dispatch.</p>
-              <img src="assets/eta_distance.png" alt="ETA and Accept Distance Change">
-              <p class="insight">Insight: ETA increased by ~30s, accept distance grew by 200m.</p>
-            </li>
-            <li>
-              <p><strong>Thresholds:</strong> Suggest acceptable thresholds based on trade-offs.</p>
-              <img src="assets/thresholds.png" alt="Suggested Thresholds">
-              <p class="insight">Insight: A balance of ≤10% cancellation and ≤1min ETA increase is optimal.</p>
+              <p><strong>ETA & Accept Distance:</strong> A/B testing between Dispatch and Legacy.</p>
+              <img src="assets/driver7.PNG" alt="A/B testing">
+              <p class="insight">Insight: There are no significant difference between Forward and Legacy in both ETA and Accept Distance.</p>
             </li>
           </ul>
         </article>
