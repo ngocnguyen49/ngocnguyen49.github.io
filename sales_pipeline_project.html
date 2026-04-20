@@ -72,9 +72,35 @@
       </section>
 
       <!-- Objective -->
-      <section>
-        <h2>Objective</h2>
-        <p>The objective is to build a clean, documented, and reproducible data pipeline that takes a raw CSV sales file and delivers a professional Power BI dashboard. This includes designing the Snowflake schema, writing transformation SQL, validating data quality across all 23 columns, and producing analytics-ready aggregation tables that Power BI can consume efficiently using Import mode.</p>
+      <section style="font-family: sans-serif; line-height: 1.6; color: #333;">
+        <h2 style="font-size: 20px; border-bottom: 1px solid var(--border); padding-bottom: 8px;">Project Objective</h2>
+        <p>
+          The goal is to build a professional, reproducible data pipeline migrating raw CSV data into a <strong>Snowflake Data Warehouse</strong>. This architecture replaces fragile flat files with a "single source of truth" for superior security and performance.
+        </p>
+      
+        <ul style="padding-left: 20px; margin-bottom: 24px;">
+          <li><strong>Snowflake Modeling:</strong> Structured schema design to replace unoptimized CSVs.</li>
+          <li><strong>SQL Transformation:</strong> Automated cleaning of all 23 columns for high data integrity.</li>
+          <li><strong>BI Optimization:</strong> High-speed Power BI dashboard using <code>Import Mode</code>.</li>
+        </ul>
+      
+        <div style="background: var(--dark2); padding: 16px; border-radius: 8px; margin-bottom: 24px;">
+          <h3 style="font-size: 16px; margin-top: 0;">Why Snowflake vs. Direct CSV?</h3>
+          <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
+            <li><strong>Reliability:</strong> Enforces data types to prevent the formatting errors common in CSVs.</li>
+            <li><strong>Performance:</strong> Offloads heavy computation to Snowflake, keeping the BI layer fast.</li>
+            <li><strong>Scalability:</strong> Effortlessly handles millions of rows with enterprise-grade security.</li>
+          </ul>
+        </div>
+      
+        <div style="text-align: center; margin-top: 30px;">
+          <img src="your-image-path.png" alt="Sales Performance Dashboard" 
+               style="border: 1px dashed var(--border); border-radius: 10px; width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
+          
+          <p style="color: var(--muted); font-size: 13px; margin-top: 12px;">
+            Sales Performance Dashboard: Powered by <code>Snowflake</code> SQL transformations and <code>Power BI</code> Import Mode.
+          </p>
+        </div>
       </section>
 
       <!-- Chapter 1: Data Preprocessing -->
