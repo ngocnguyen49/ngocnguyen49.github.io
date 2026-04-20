@@ -202,11 +202,13 @@
             <div class="step-title">Filters</div>
             <div class="step-desc">Year, Region, and Segment slicers filter all visuals simultaneously</div>
           </div>
-        <section>
-          <p style="color:var(--muted);font-size:14px;"> <code>.PNG</code> export from Power BI.</p>
-  
-          <img src="assets/sales_pipeling.png" alt="Power BI Dashboard" style="margin-top:16px; border:1px dashed var(--border); border-radius:10px; width:100%; height:auto; display:block;">
-        </section>
+        <section style="text-align: center;">
+          <img src="assets/sales_pipeling.png" alt="Sales Performance Dashboard" 
+               style="margin-bottom:12px; border:1px dashed var(--border); border-radius:10px; width:100%; max-width:800px; height:auto; display:inline-block;">
+        
+          <p style="color:var(--muted); font-size:14px; margin:0;">
+            Sales Performance Dashboard export from <code>Power BI</code>
+        </p>
       </section>
 
       <!-- Chapter 5: Repository Structure -->
@@ -222,9 +224,9 @@
               <div class="ft-file sql">├── 01_snowflake_setup.sql</div>
               <div class="ft-file sql">├── 02_load_csv_snowflake_only.sql</div>
               <div class="ft-file sql">├── 03_transform.sql</div>
-              <div class="ft-file sql">└── 05_data_quality_checks.sql</div>
+              <div class="ft-file sql">└── 04_data_quality_checks.sql</div>
             </div>
-            <div class="ft-folder">├── powerbi/</div>
+            <div class="ft-folder">├── power/</div>
             <div class="ft-indent">
               <div class="ft-file pbix">└── sales_dashboard.pbix</div>
             </div>
