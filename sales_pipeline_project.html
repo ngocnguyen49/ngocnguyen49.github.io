@@ -53,19 +53,23 @@
       <!-- Single Section containing Background Information and all subsequent content -->
       <section>
         <h2>Background Information</h2>
-        <p>In the modern data landscape, raw CSV files are only the starting point. This project demonstrates a complete end-to-end data pipeline that ingests retail sales data from a flat CSV file, stages and transforms it inside Snowflake, and delivers it as an interactive Power BI dashboard.</p>
-        <p>The pipeline covers every step a data analyst encounters in the real world — loading raw data, cleaning and typing it correctly, running data quality checks, and building analytics-ready tables that feed directly into business intelligence tools.</p>
-        <p>Designed to be fully reproducible and documented for GitHub, this project reflects industry best practices for structuring a simple but professional analytics workflow without requiring any external orchestration tools.</p>
+        <p>In modern cloud data architectures, building reliable and scalable pipelines requires decoupling storage from compute while strictly maintaining data quality. This project demonstrates an enterprise-grade, cloud-native data pipeline that ingests raw retail sales CSV files stored in an <strong>Amazon S3 bucket</strong>, runs pre-load validation, transforms data across a multi-tier <strong>Medallion Architecture</strong> inside Snowflake, and delivers business metrics through Power BI.</p>
+        
+        <p>To prevent malformed data from corrupting downstream models, automated Python validation runs prior to loading, checking schema consistency and critical integrity constraints. Validated data is then loaded into Snowflake and processed across three isolated layers: <strong>Bronze</strong> (immutable raw staging), <strong>Silver</strong> (cleansed, typed, and quality-tested data), and <strong>Gold</strong> (business-level aggregations engineered for BI reporting).</p>
+
+        <p>Reflecting industry best practices for cloud data warehousing and data lakehouse governance, this workflow highlights how leveraging S3 staging, Python validation scripts, modular SQL transformation layers, and BI tools delivers a robust, single source of truth for decision-makers.</p>
 
         <!-- Pipeline flow -->
         <div class="pipeline">
-          <div class="pipeline-step"><i class="fas fa-file-csv"></i> CSV File</div>
+          <div class="pipeline-step"><i class="fab fa-aws"></i> AWS S3 (CSV)</div>
           <span class="pipeline-arrow"><i class="fas fa-chevron-right"></i></span>
-          <div class="pipeline-step"><i class="fas fa-layer-group"></i> Snowflake Stage</div>
+          <div class="pipeline-step"><i class="fab fa-python"></i> Python Validation</div>
           <span class="pipeline-arrow"><i class="fas fa-chevron-right"></i></span>
-          <div class="pipeline-step"><i class="fas fa-table"></i> Raw Table</div>
+          <div class="pipeline-step"><i class="fas fa-database"></i> Bronze (Raw)</div>
           <span class="pipeline-arrow"><i class="fas fa-chevron-right"></i></span>
-          <div class="pipeline-step"><i class="fas fa-code"></i> Transform</div>
+          <div class="pipeline-step"><i class="fas fa-filter"></i> Silver (Clean)</div>
+          <span class="pipeline-arrow"><i class="fas fa-chevron-right"></i></span>
+          <div class="pipeline-step"><i class="fas fa-award"></i> Gold (Aggregates)</div>
           <span class="pipeline-arrow"><i class="fas fa-chevron-right"></i></span>
           <div class="pipeline-step"><i class="fas fa-chart-pie"></i> Power BI</div>
         </div>
