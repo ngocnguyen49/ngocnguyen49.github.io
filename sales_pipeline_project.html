@@ -50,7 +50,7 @@
   <main>
     <div class="container">
 
-      <!-- Background -->
+      <!-- Single Section containing Background Information and all subsequent content -->
       <section>
         <h2>Background Information</h2>
         <p>In the modern data landscape, raw CSV files are only the starting point. This project demonstrates a complete end-to-end data pipeline that ingests retail sales data from a flat CSV file, stages and transforms it inside Snowflake, and delivers it as an interactive Power BI dashboard.</p>
@@ -69,23 +69,22 @@
           <span class="pipeline-arrow"><i class="fas fa-chevron-right"></i></span>
           <div class="pipeline-step"><i class="fas fa-chart-pie"></i> Power BI</div>
         </div>
-      </section>
 
-      <!-- Objective -->
-      <section>
+        <br><br>
+
         <h2>Objective</h2>
         <p>
           The goal is to build a professional, reproducible data pipeline migrating raw CSV data into a <strong>Snowflake Data Warehouse</strong>. This architecture replaces fragile flat files with a "single source of truth" for superior security and performance.
         </p>
-      
+       
         <ul style="padding-left: 20px; margin-bottom: 24px;">
           <li><strong>Snowflake Modeling:</strong> Structured schema design to replace unoptimized CSVs.</li>
           <li><strong>SQL Transformation:</strong> Automated cleaning of all 23 columns for high data integrity.</li>
           <li><strong>BI Optimization:</strong> High-speed Power BI dashboard using <code>Import Mode</code>.</li>
-        </div>
+        </ul>
 
-      <!-- Chapter 1: Data Preprocessing -->
-      <section>
+        <br>
+
         <h2>Chapter 1: Data Preprocessing</h2>
         <p>Before transformation, raw data was loaded into Snowflake as plain strings to avoid parse errors. The following preprocessing steps were applied inside Snowflake using SQL:</p>
         <ul class="findings">
@@ -95,10 +94,9 @@
           <li><i class="fas fa-ruler"></i> Derived columns added: <code>days_to_ship</code>, <code>profit_margin_pct</code>, <code>order_month</code>, <code>order_year</code></li>
           <li><i class="fas fa-filter"></i> Rows with null Sales, Profit, or Quantity were excluded from the fact table</li>
         </ul>
-      </section>
 
-      <!-- Chapter 2: Snowflake Schema -->
-      <section>
+        <br>
+
         <h2>Chapter 2: Snowflake Schema</h2>
         <p>Four objects were created inside Snowflake across two schemas to separate raw ingestion from analytics-ready data.</p>
 
@@ -132,10 +130,9 @@
             <tr><td><code>agg_customer_summary</code></td><td>Table</td><td>One row per customer</td><td>Grouped</td></tr>
           </tbody>
         </table>
-      </section>
 
-      <!-- Chapter 3: Data Quality -->
-      <section>
+        <br>
+
         <h2>Chapter 3: Data Quality Checks</h2>
         <p>A dedicated SQL file runs nine sections of quality checks against <code>raw_orders</code> before any data reaches Power BI. The final scorecard section outputs a PASS/FAIL result for every critical check.</p>
 
@@ -181,10 +178,9 @@
             <div class="check-desc">PASS / FAIL per check</div>
           </div>
         </div>
-      </section>
 
-      <!-- Chapter 4: Power BI Dashboard -->
-      <section>
+        <br>
+
         <h2>Chapter 4: Power BI Dashboard</h2>
         <p>The dashboard uses Import mode — data is pulled from Snowflake once and stored inside the <code>.pbix</code> file for fast report rendering. Three Snowflake tables are loaded directly: <code>fact_orders</code>, <code>agg_monthly_sales</code>, and <code>agg_customer_summary</code>.</p>
 
@@ -209,17 +205,18 @@
             <div class="step-title">Filters</div>
             <div class="step-desc">Year, Region, and Segment slicers filter all visuals simultaneously</div>
           </div>
-        <section style="text-align: center;">
+        </div>
+
+        <div style="text-align: center; margin-top: 24px;">
           <img src="assets/sales_pipeling.png" alt="Sales Performance Dashboard" 
                style="margin-bottom:12px; border:1px dashed var(--border); border-radius:10px; width:100%; max-width:800px; height:auto; display:inline-block;">
-        
           <p style="color:var(--muted); font-size:14px; margin:0;">
             Sales Performance Dashboard export from <code>Power BI</code>
-        </p>
-      </section>
+          </p>
+        </div>
 
-      <!-- Chapter 5: Repository Structure -->
-      <section>
+        <br>
+
         <h2>Chapter 5: Repository Structure</h2>
         <p>The project is fully documented and published on GitHub with a clean folder structure separating SQL, Power BI, and data files.</p>
 
