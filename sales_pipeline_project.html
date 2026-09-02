@@ -89,14 +89,17 @@
         </ul>
         <br>
 
-        <h2>Chapter 1: Data Preprocessing</h2>
-        <p>Before transformation, raw data was loaded into Snowflake as plain strings to avoid parse errors. The following preprocessing steps were applied inside Snowflake using SQL:</p>
+        <h2>Chapter 1: Bronze Layer (Raw Ingestion & Dynamic Schema)</h2>
+        <p>
+          The Bronze layer serves as an immutable landing zone inside Snowflake. Data is dynamically ingested directly from an <strong>Amazon S3 External Stage</strong> using automated schema inference, preserving raw fidelity while capturing ingestion audit metadata.
+        </p>
+
         <ul class="findings">
-          <li><i class="fas fa-calendar-alt"></i> Date columns cast from <code>MM/DD/YYYY</code> string format to proper <code>DATE</code> type using <code>TRY_TO_DATE</code></li>
-          <li><i class="fas fa-calculator"></i> Numeric columns (Sales, Profit, Discount, Quantity) cast using <code>TRY_CAST</code> to safely handle malformed values</li>
-          <li><i class="fas fa-toggle-on"></i> Returned column converted from text (YES/NO) to boolean <code>is_returned</code></li>
-          <li><i class="fas fa-ruler"></i> Derived columns added: <code>days_to_ship</code>, <code>profit_margin_pct</code>, <code>order_month</code>, <code>order_year</code></li>
-          <li><i class="fas fa-filter"></i> Rows with null Sales, Profit, or Quantity were excluded from the fact table</li>
+          <li><i class="fab fa-python"></i> <strong>Pre-Load Validation:</strong> Executes automated Python scripts (<code>00_pre_load_validation.py</code>) to verify raw file structure and catch integrity errors prior to loading.</li>
+          <li><i class="fab fa-aws"></i> <strong>S3 External Stage Integration:</strong> Connects Snowflake directly to the raw S3 bucket using <code>CREATE STAGE</code> with authenticated IAM credentials.</li>
+          <li><i class="fas fa-magic"></i> <strong>Dynamic Schema Inference:</strong> Leverages Snowflake's <code>INFER_SCHEMA</code> and <code>USING TEMPLATE</code> functions to dynamically construct the <code>raw_orders</code> table without manual column definitions.</li>
+          <li><i class="fas fa-file-import"></i> <strong>Flexible Bulk Ingestion:</strong> Ingests source data via <code>COPY INTO</code> using <code>MATCH_BY_COLUMN_NAME = CASE_INSENSITIVE</code> to safely handle varying CSV header orders.</li>
+          <li><i class="fas fa-clock"></i> <strong>Audit Lineage:</strong> Appends a <code>_loaded_at</code> timestamp metadata column to establish data lineage for downstream processing.</li>
         </ul>
 
         <br>
