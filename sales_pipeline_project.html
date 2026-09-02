@@ -118,51 +118,17 @@
 
         <br>
 
-        <h2>Chapter 3: Data Quality Checks</h2>
-        <p>A dedicated SQL file runs nine sections of quality checks against <code>raw_orders</code> before any data reaches Power BI. The final scorecard section outputs a PASS/FAIL result for every critical check.</p>
+        <h2>Chapter 3: Gold Layer (Business Analytics & Pipeline Health)</h2>
+        <p>
+          The Gold layer models analytics-ready data structures directly from the Silver <code>fact_orders</code> table. It produces high-performance business aggregations designed for BI reporting alongside automated pipeline quality reporting.
+        </p>
 
-        <div class="check-grid">
-          <div class="check-card c-blue">
-            <i class="fas fa-hashtag"></i>
-            <div class="check-label">Row Counts</div>
-            <div class="check-desc">Raw vs fact comparison</div>
-          </div>
-          <div class="check-card c-green">
-            <i class="fas fa-ban"></i>
-            <div class="check-label">Null Checks</div>
-            <div class="check-desc">All 23 columns scanned</div>
-          </div>
-          <div class="check-card c-warn">
-            <i class="fas fa-copy"></i>
-            <div class="check-label">Duplicates</div>
-            <div class="check-desc">Row ID &amp; order uniqueness</div>
-          </div>
-          <div class="check-card c-teal">
-            <i class="fas fa-exclamation-triangle"></i>
-            <div class="check-label">Invalid Values</div>
-            <div class="check-desc">Negative sales, bad dates</div>
-          </div>
-          <div class="check-card c-purp">
-            <i class="fas fa-fingerprint"></i>
-            <div class="check-label">Uniqueness</div>
-            <div class="check-desc">Distinct value counts</div>
-          </div>
-          <div class="check-card c-blue">
-            <i class="fas fa-calendar-check"></i>
-            <div class="check-label">Date Range</div>
-            <div class="check-desc">Parse errors &amp; coverage</div>
-          </div>
-          <div class="check-card c-green">
-            <i class="fas fa-chart-line"></i>
-            <div class="check-label">Numeric Ranges</div>
-            <div class="check-desc">Min / max / avg per field</div>
-          </div>
-          <div class="check-card c-warn">
-            <i class="fas fa-clipboard-check"></i>
-            <div class="check-label">Scorecard</div>
-            <div class="check-desc">PASS / FAIL per check</div>
-          </div>
-        </div>
+        <ul class="findings">
+          <li><i class="fas fa-heartbeat"></i> <strong>Pipeline Health & Governance Monitoring:</strong> Constructs an automated audit table (<code>agg_data_quality_summary</code>) tracking Bronze-to-Silver row retention, data exclusion metrics, and enforcing a minimum 95% quality pass-rate status.</li>
+          <li><i class="fas fa-chart-line"></i> <strong>Monthly Sales Aggregations:</strong> Aggregates key revenue metrics (<code>agg_monthly_sales</code>) grouped by year and month to serve fast-loading KPI tiles, trend visuals, and period-over-period comparisons in Power BI.</li>
+          <li><i class="fas fa-users"></i> <strong>Customer 360 Summaries:</strong> Generates per-customer profiles (<code>agg_customer_summary</code>) capturing total lifetime sales, profit margins, segment/region breakdowns, and calculating <code>customer_lifetime_days</code>.</li>
+          <li><i class="fas fa-bolt"></i> <strong>BI Import Optimization:</strong> Pre-aggregates high-cardinality data directly inside Snowflake, minimizing report query latencies and compute costs during Power BI data refreshes.</li>
+        </ul>
 
         <br>
 
@@ -202,30 +168,6 @@
 
         <br>
 
-        <h2>Chapter 5: Repository Structure</h2>
-        <p>The project is fully documented and published on GitHub with a clean folder structure separating SQL, Power BI, and data files.</p>
-
-        <div class="file-tree">
-          <div class="ft-root">sales-analytics-pipeline/</div>
-          <div class="ft-indent">
-            <div class="ft-folder">├── snowflake/</div>
-            <div class="ft-indent">
-              <div class="ft-file sql">├── 01_snowflake_setup.sql</div>
-              <div class="ft-file sql">├── 02_load_csv_snowflake_only.sql</div>
-              <div class="ft-file sql">├── 03_transform.sql</div>
-              <div class="ft-file sql">└── 04_data_quality_checks.sql</div>
-            </div>
-            <div class="ft-folder">├── power/</div>
-            <div class="ft-indent">
-              <div class="ft-file pbix">└── sales_dashboard.pbix</div>
-            </div>
-            <div class="ft-folder">├── data/</div>
-            <div class="ft-indent">
-              <div class="ft-file csv">└── sample_data.csv</div>
-            </div>
-            <div class="ft-file md">├── README.md</div>
-          </div>
-        </div>
       </section>
 
       <!-- GitHub Button -->
