@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nhu Ngoc - Personal Portfolio</title>
   
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ET4D67EEF0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -20,12 +19,10 @@
 </head>
 <body>
 
-  <!-- MENU TOGGLE -->
   <div id="menu-button" class="menu-toggle">
     <span>MENU</span> <i class="fas fa-bars"></i>
   </div>
 
-  <!-- MENU POPUP -->
   <div id="menu-popup" class="menu-popup hidden">
     <div class="menu-content">
       <div class="menu-header">
@@ -42,7 +39,6 @@
     </div>
   </div>
 
-  <!-- HERO SECTION -->
   <header class="hero-section">
     <div class="container">
       <h1>HI I'M NHU NGOC</h1>
@@ -50,7 +46,6 @@
     </div>
   </header>
 
-  <!-- ABOUT SECTION -->
   <section id="about">
     <div class="container">
       <h2>ABOUT ME</h2>
@@ -64,7 +59,6 @@
     </div>
   </section>
 
-  <!-- CERTIFICATES SECTION -->
   <section id="certificates">
     <div class="container">
       <h2>CERTIFICATES</h2>
@@ -77,24 +71,22 @@
     </div>
   </section>
 
-  <!-- PROJECTS SECTION -->
   <section id="projects">
     <div class="container">
       <h2>PROJECTS</h2>
 
-      <!-- Filter Buttons -->
       <div class="filter-buttons">
         <button class="filter-btn active" data-category="all">All</button>
         <button class="filter-btn" data-category="powerbi">POWER BI</button>
         <button class="filter-btn" data-category="sql">SQL</button>
         <button class="filter-btn" data-category="python">PYTHON</button>
+        <button class="filter-btn" data-category="snowflake">SNOWFLAKE</button>
+        <button class="filter-btn" data-category="aws-s3">AWS S3</button>
       </div>
 
-      <!-- Project Cards Grid -->
       <div class="grid powerbi-style" id="projectGrid">
         
-        <!-- Project 1 -->
-        <div class="card category-card powerbi" data-category="powerbi">
+        <div class="card category-card powerbi snowflake aws-s3" data-category="powerbi snowflake aws-s3">
           <img src="assets/sales.jpg" alt="Sales Pipeline using Snowflake + PowerBI">
           <div class="card-content">
             <h3>PROJECT 1</h3>
@@ -106,7 +98,6 @@
           </div>
         </div>
         
-        <!-- Project 2 -->
         <div class="card category-card powerbi" data-category="powerbi">
           <img src="assets/ecommerce-thumbail.jpg" alt="E-commerce Beauty Project">
           <div class="card-content">
@@ -119,7 +110,6 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
         <div class="card category-card powerbi" data-category="powerbi">
           <img src="assets/email-thumbail.jpg" alt="Email Performance Project">
           <div class="card-content">
@@ -132,7 +122,6 @@
           </div>
         </div>
 
-        <!-- Project 4 -->
         <div class="card category-card python" data-category="python">
           <img src="assets/game-thumbail.jpg" alt="Game Retention A/B Testing Project">
           <div class="card-content">
@@ -145,7 +134,6 @@
           </div>
         </div>
 
-        <!-- Project 5 -->
         <div class="card category-card sql" data-category="sql">
           <img src="assets/banking-thumbail.jpg" alt="Banking Financial Behavior Project">
           <div class="card-content">
@@ -158,12 +146,7 @@
           </div>
         </div>
 
-      </div> <!-- /#projectGrid -->
-    </div> <!-- /.container -->
-  </section> <!-- /#projects -->
-
-  <!-- CONTACT SECTION -->
-  <section id="contact">
+      </div> </div> </section> <section id="contact">
     <div class="container custom-footer">
       <h2>GET IN TOUCH</h2>
       <p class="description">Let's chat! Your data, my brain – together we can be unstoppable.</p>
@@ -197,7 +180,7 @@
       });
     });
 
-    // FILTER BUTTON FUNCTIONALITY
+    // FILTER BUTTON FUNCTIONALITY (Updated for multi-tag matching)
     const buttons = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.category-card');
 
@@ -206,10 +189,15 @@
         buttons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        const category = btn.getAttribute('data-category');
+        const filterCategory = btn.getAttribute('data-category');
         cards.forEach(card => {
-          card.style.display = (category === 'all' || card.getAttribute('data-category') === category)
-            ? 'block' : 'none';
+          const cardCategories = card.getAttribute('data-category').split(' ');
+          
+          if (filterCategory === 'all' || cardCategories.includes(filterCategory)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
         });
       });
     });
