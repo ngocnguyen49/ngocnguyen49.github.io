@@ -78,15 +78,15 @@
 
         <h2>Objective</h2>
         <p>
-          The goal is to build a professional, reproducible data pipeline migrating raw CSV data into a <strong>Snowflake Data Warehouse</strong>. This architecture replaces fragile flat files with a "single source of truth" for superior security and performance.
+          The goal is to build an automated, cloud-native data pipeline that ingests raw CSV files stored in an <strong>AWS S3 External Stage</strong> into a <strong>Snowflake Data Warehouse</strong>. This end-to-end architecture replaces fragile manual loads with an enterprise Medallion Architecture, ensuring high data quality, automated governance, and high-performance reporting.
         </p>
-       
+        
         <ul style="padding-left: 20px; margin-bottom: 24px;">
-          <li><strong>Snowflake Modeling:</strong> Structured schema design to replace unoptimized CSVs.</li>
-          <li><strong>SQL Transformation:</strong> Automated cleaning of all 23 columns for high data integrity.</li>
-          <li><strong>BI Optimization:</strong> High-speed Power BI dashboard using <code>Import Mode</code>.</li>
+          <li><strong>Pre-Load Validation:</strong> Execute automated Python scripts (<code>00_pre_load_validation.py</code>) to catch schema mismatches and malformed records before ingestion.</li>
+          <li><strong>S3 External Staging & Bronze Ingestion:</strong> Connect Snowflake directly to AWS S3 via storage integrations for seamless ingestion into raw staging (<code>01_setup_and_load.sql</code>).</li>
+          <li><strong>Medallion SQL Transformations:</strong> Programatically clean, type-cast, and execute data quality tests across Silver (<code>02_transform_and_quality.sql</code>) and Gold (<code>03_aggregations.sql</code>) layers.</li>
+          <li><strong>BI Optimization:</strong> Deliver high-speed, business-ready aggregations to Power BI using optimized <code>Import Mode</code>.</li>
         </ul>
-
         <br>
 
         <h2>Chapter 1: Data Preprocessing</h2>
