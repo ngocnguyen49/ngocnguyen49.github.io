@@ -104,25 +104,17 @@
 
         <br>
 
-        <h2>Chapter 2: Snowflake Schema</h2>
-        <p>Four objects were created inside Snowflake across two schemas to separate raw ingestion from analytics-ready data.</p>
+        <h2>Chapter 2: Silver Layer (Transformation & Data Quality)</h2>
+        <p>
+          The Silver layer cleanses, standardizes, and validates Bronze data to construct a trusted <code>fact_orders</code> table. Prior to materialization, an automated data quality scorecard executes inside Snowflake to enforce business integrity constraints.
+        </p>
 
-        <div class="file-tree">
-          <div class="ft-root">PIPELINE_DB</div>
-          <div class="ft-indent">
-            <div class="ft-folder">├── RAW/</div>
-            <div class="ft-indent">
-              <div class="ft-file sql">└── raw_orders &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;← all 23 columns as STRING</div>
-            </div>
-            <div class="ft-folder">└── ANALYTICS/</div>
-            <div class="ft-indent">
-              <div class="ft-file sql">├── vw_clean_orders &nbsp;&nbsp;&nbsp;← view: cast + clean</div>
-              <div class="ft-file sql">├── fact_orders &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;← table: BI-ready rows</div>
-              <div class="ft-file sql">├── agg_monthly_sales &nbsp;← monthly aggregation</div>
-              <div class="ft-file sql">└── agg_customer_summary ← per-customer totals</div>
-            </div>
-          </div>
-        </div>
+        <ul class="findings">
+          <li><i class="fas fa-clipboard-check"></i> <strong>Automated Quality Scorecard:</strong> Runs multi-point SQL validation checks verifying row counts, strict non-null values for key business fields, date ranges, and zero negative sales.</li>
+          <li><i class="fas fa-spell-check"></i> <strong>Data Cleansing & Standardizing:</strong> Applies string trimming across text fields, converts text flags to booleans (<code>is_returned</code>), and enforces proper data types for dates and numeric values.</li>
+          <li><i class="fas fa-calculator"></i> <strong>Derived Metrics Engineering:</strong> Calculates operational metrics inline, including <code>days_to_ship</code>, <code>profit_margin_pct</code>, and extracted <code>order_year</code> / <code>order_month</code> attributes.</li>
+          <li><i class="fas fa-layer-group"></i> <strong>Staging View to Fact Materialization:</strong> Encapsulates logic inside a staging view (<code>stg_orders</code>) before materializing into a high-performance <code>fact_orders</code> table for downstream Gold layer aggregations.</li>
+        </ul>
 
         <br>
         <table class="data-table">
