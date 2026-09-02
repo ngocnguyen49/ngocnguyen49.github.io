@@ -117,20 +117,6 @@
         </ul>
 
         <br>
-        <table class="data-table">
-          <thead>
-            <tr><th>Table</th><th>Type</th><th>Purpose</th><th>Rows</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><code>raw_orders</code></td><td>Table</td><td>Staging — exact CSV copy</td><td>All rows</td></tr>
-            <tr><td><code>vw_clean_orders</code></td><td>View</td><td>Clean &amp; cast — no storage</td><td>—</td></tr>
-            <tr><td><code>fact_orders</code></td><td>Table</td><td>BI-ready materialized table</td><td>Valid rows</td></tr>
-            <tr><td><code>agg_monthly_sales</code></td><td>Table</td><td>Pre-aggregated for KPI tiles</td><td>Grouped</td></tr>
-            <tr><td><code>agg_customer_summary</code></td><td>Table</td><td>One row per customer</td><td>Grouped</td></tr>
-          </tbody>
-        </table>
-
-        <br>
 
         <h2>Chapter 3: Data Quality Checks</h2>
         <p>A dedicated SQL file runs nine sections of quality checks against <code>raw_orders</code> before any data reaches Power BI. The final scorecard section outputs a PASS/FAIL result for every critical check.</p>
